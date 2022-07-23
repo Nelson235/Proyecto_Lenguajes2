@@ -1,0 +1,18 @@
+<div>
+  <h2>Parking Add</h2>
+  <label>Name:
+    <input [(ngModel)]="parkingData.nameParking"  placeholder="NameParking"/>
+  </label><br>
+  <label>Capacity:
+    <input [(ngModel)]="parkingData.capacity"  placeholder="Capacity"/>
+  </label><br>
+  <label>Province:
+    <input [(ngModel)]="parkingData.province"  placeholder="Province"/>
+  </label><br>
+  <label>District:
+    <input [(ngModel)]="parkingData.district"  placeholder="District"/>
+  </label><br>
+
+    <button (click)="addParking()">Save</button>
+    
+</div>

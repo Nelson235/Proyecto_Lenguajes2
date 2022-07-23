@@ -1,0 +1,18 @@
+<h2>Parking List</h2>
+
+<div>
+  <button (click)="add()">
+    Add
+  </button>
+</div>
+
+<ul class="students">
+  <li *ngFor="let s of parkings; let i=index;">
+    <a routerLink="/student-details/{{s.id}}">
+      <span class="badge">{{i+1}}</span> {{s.nameParking}}
+    </a>
+    <button class="delete" title="delete student"
+      (click)="delete(s.idParking)">x</button>
+  </li>
+</ul>
+<a href='/user-list'>Users</a>

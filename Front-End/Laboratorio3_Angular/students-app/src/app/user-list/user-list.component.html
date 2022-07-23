@@ -1,0 +1,18 @@
+<p>Users</p>
+
+<div>
+  <button (click)="add_User()">
+    Add
+  </button>
+</div>
+
+<ul class="students">
+    <li *ngFor="let s of users; let i=index;">
+      <a routerLink="/student-details/{{s.id}}">
+        <span class="badge">{{i+1}}</span> {{s.name}}
+      </a>
+      <button class="delete" title="delete User"
+        (click)="delete(s.idUser)">x</button>
+    </li>
+  </ul>
+  
