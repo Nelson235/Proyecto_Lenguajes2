@@ -35,9 +35,9 @@ add(){
 }
 
 
-delete(idParking:number)
+delete(id:number)
 {
-  this.rest.delete(idParking)
+  this.rest.delete(id)
   .subscribe( 
     (data) =>{
       console.log(data);

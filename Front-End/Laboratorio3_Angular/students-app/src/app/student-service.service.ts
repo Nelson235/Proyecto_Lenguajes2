@@ -26,13 +26,13 @@ export class StudentServiceService {
 
   }
 
-  get(): Observable<any> {
+  /*get(): Observable<any> {
 
     return this.http.get(endpoint+'Parking/GetParking',httpOptions)
 
-  }
+  }*/
 
-  get2(): Observable<any> {
+  get(): Observable<any> {
 
     return this.http.get(endpoint2+'Parking/GetParking',httpOptions)
 
@@ -40,37 +40,37 @@ export class StudentServiceService {
 
 
 
-  delete(idParking: number): Observable<any> {
+ /* delete(idParking: number): Observable<any> {
     return this.http.delete(endpoint+'Parking/DeleteParking/'+idParking,httpOptions)
     .pipe(
       catchError(this.handleError('DeleteParking'))
     );
-  }
+  }*/
 
-  delete2(idParking: number): Observable<any> {
-    return this.http.delete(endpoint2+'Parking/DeleteParking/'+idParking,httpOptions)
+  delete(id: number): Observable<any> {
+    return this.http.delete(endpoint2+'Parking/delete/'+id,httpOptions)
     .pipe(
       catchError(this.handleError('DeleteParking'))
     );
   }
 
 
-  add(parking: any){
+ /* add(parking: any){
     return this.http.post(endpoint+'Parking/', parking, httpOptions)
-  }
+  }*/
 
-  add2(parking: any){
+  add(parking: any){
     return this.http.post(endpoint2+'Parking/', parking, httpOptions)
   }
 
 
   
 
-  getById(id:any): Observable<any> {
+ /* getById(id:any): Observable<any> {
     return this.http.get(endpoint+'Parking/GetParking/'+id,httpOptions)
-  }
+  }*/
 
-  getById2(id:any): Observable<any> {
+  getById(id:any): Observable<any> {
     return this.http.get(endpoint2+'Parking/GetParking/'+id,httpOptions)
   }
 

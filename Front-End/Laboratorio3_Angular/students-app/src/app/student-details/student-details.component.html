@@ -1,9 +1,9 @@
-<div *ngIf="student" class="students">
-    <h2>{{student.name | uppercase}} Details</h2>
-    <div><span>Email: </span>{{student.email}}</div>
-    <div><span>Major: </span>{{student.majorId}}</div>
+<div *ngIf="parking" class="Parking">
+    <h2>{{parking.name | uppercase}} Details</h2>
+    <div><span>Province: </span>{{parking.province}}</div>
+    <div><span>Capacity: </span>{{parking.capacity}}</div>
     <div>
-      <button routerLink="/student-update/{{student.id}}">
+      <button routerLink="/student-update/{{parking.id_Parking}}">
         Edit
       </button>
     </div>

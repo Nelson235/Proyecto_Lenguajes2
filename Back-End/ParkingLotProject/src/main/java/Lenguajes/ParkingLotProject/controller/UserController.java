@@ -24,9 +24,9 @@ public class UserController {
     }
 
     @GetMapping("/GetUser/{id}")
-    public ResponseEntity<User> get(@PathVariable Integer id) {
+    public ResponseEntity<User> get(@PathVariable Integer id_User) {
         try {
-            User user = service.get(id);
+            User user = service.get(id_User);
             return new ResponseEntity<User>(user, HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<User>(HttpStatus.NOT_FOUND);

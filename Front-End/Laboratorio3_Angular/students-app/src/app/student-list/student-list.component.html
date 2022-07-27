@@ -8,11 +8,11 @@
 
 <ul class="students">
   <li *ngFor="let s of parkings; let i=index;">
-    <a routerLink="/student-details/{{s.id}}">
-      <span class="badge">{{i+1}}</span> {{s.nameParking}}
+    <a routerLink="/student-details/{{s.id_Parking}}">
+      <span class="badge">{{i+1}}</span> {{s.name}}
     </a>
     <button class="delete" title="delete student"
-      (click)="delete(s.idParking)">x</button>
+      (click)="delete(s.id_Parking)">x</button>
   </li>
 </ul>
 <a href='/user-list'>Users</a>
