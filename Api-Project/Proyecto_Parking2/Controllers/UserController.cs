@@ -44,6 +44,21 @@ namespace Proyecto_Parking2.Controllers
             return user;
         }
 
+        // GET: api/Users/name
+        [HttpGet]
+        [Route("[action]/{email}")]
+        public async Task<ActionResult<User>> GetUserEmail(string email)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(e => e.Email == email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
