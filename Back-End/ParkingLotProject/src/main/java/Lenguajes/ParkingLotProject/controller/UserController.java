@@ -24,16 +24,16 @@ public class UserController {
     }
 
     @GetMapping("/GetUser/{id}")
-    public ResponseEntity<User> get(@PathVariable Integer id_User) {
+    public ResponseEntity<User> get(@PathVariable Integer id) {
         try {
-            User user = service.get(id_User);
+            User user = service.get(id);
             return new ResponseEntity<User>(user, HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
         }
     }
 
-    @PostMapping("/authenticate")
+    @PostMapping("/")
     public void add(@RequestBody User user) {
         service.save(user);
     }

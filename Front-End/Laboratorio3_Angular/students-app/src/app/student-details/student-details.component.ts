@@ -13,7 +13,7 @@ export class StudentDetailsComponent implements OnInit {
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.rest.getById(this.route.snapshot.params['id_Parking']).subscribe((data: {}) => {
+    this.rest.getById(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.parking = data;
     });

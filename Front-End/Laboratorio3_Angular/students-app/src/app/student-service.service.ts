@@ -63,6 +63,9 @@ export class StudentServiceService {
     return this.http.post(endpoint2+'Parking/', parking, httpOptions)
   }
 
+  add_User2(id:number,parking: any){
+    return this.http.put(endpoint2+'Parking/update/'+id, parking, httpOptions)
+  }
 
   
 
@@ -92,45 +95,47 @@ export class StudentServiceService {
 
 /////////////////////////USER////////////
 
-get_User(): Observable<any> {
+/*get_User(): Observable<any> {
 
   return this.http.get(endpoint+'User/GetUsers',httpOptions)
 
-}
+}*/
 
-get_User2(): Observable<any> {
+get_User(): Observable<any> {
 
   return this.http.get(endpoint2+'User/GetUsers',httpOptions)
 
 }
 
-delete_User(idUser: number): Observable<any> {
+/*delete_User(idUser: number): Observable<any> {
   return this.http.delete(endpoint+'User/DeleteUser/'+idUser,httpOptions)
   .pipe(
     catchError(this.handleError('DeleteUser'))
   );
-}
+}*/
 
-delete_User2(idUser: number): Observable<any> {
-  return this.http.delete(endpoint2+'User/DeleteUser/'+idUser,httpOptions)
+delete_User(id_User: number): Observable<any> {
+  return this.http.delete(endpoint2+'User/DeleteUser/'+id_User,httpOptions)
   .pipe(
     catchError(this.handleError('DeleteUser'))
   );
 }
 
-add_User(user: any){
+/*add_User(user: any){
   return this.http.post(endpoint+'User/', user, httpOptions)
-}
+}*/
 
-add_User2(user: any){
+add_User(user: any){
   return this.http.post(endpoint2+'User/', user, httpOptions)
 }
 
-getById_User(id:any): Observable<any> {
-  return this.http.get(endpoint+'User/GetUser/'+id,httpOptions)
-}
 
-getById_User2(id:any): Observable<any> {
+
+/*getById_User(id:any): Observable<any> {
+  return this.http.get(endpoint+'User/GetUser/'+id,httpOptions)
+}*/
+
+getById_User(id:any): Observable<any> {
   return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
 }
 

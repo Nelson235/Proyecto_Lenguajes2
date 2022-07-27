@@ -24,9 +24,9 @@ public class ParkingController {
     }
 
     @GetMapping("/GetParking/{id}")
-    public ResponseEntity<Parking> get(@PathVariable Integer id_Parking) {
+    public ResponseEntity<Parking> get(@PathVariable Integer id) {
         try {
-            Parking parking = service.get(id_Parking);
+            Parking parking = service.get(id);
             return new ResponseEntity<Parking>(parking, HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<Parking>(HttpStatus.NOT_FOUND);
@@ -42,6 +42,11 @@ public class ParkingController {
     @PutMapping("/update/{id}")
     public ResponseEntity<Parking> update(@RequestBody Parking parking, @PathVariable Integer id) {
         try {
+            /*service.get(id);
+            if(service.get(id)){
+
+
+            }*/
             service.save(parking);
             return new ResponseEntity<Parking>(parking, HttpStatus.OK);
         } catch (NoSuchElementException e) {
