@@ -35,9 +35,9 @@ add_User(){
 }
 
 
-delete(idUser:number)
+delete(id_User:number)
 {
-  this.rest.delete_User(idUser)
+  this.rest.delete_User(id_User)
   .subscribe( 
     (data) =>{
       console.log(data);

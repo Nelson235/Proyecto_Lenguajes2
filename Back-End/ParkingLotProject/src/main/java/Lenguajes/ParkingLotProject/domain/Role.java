@@ -17,6 +17,10 @@ public class Role {
 
     public Role(){}
 
+public Role(int id_Role){
+        super();
+        this.id_Role = id_Role;
+}
 
     public Role(int id_Role,String name) {
         this.setId_Role(id_Role);
