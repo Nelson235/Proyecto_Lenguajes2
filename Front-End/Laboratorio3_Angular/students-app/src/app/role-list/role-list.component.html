@@ -1,0 +1,18 @@
+<p>Roles</p>
+
+<div>
+  <button (click)="add_Role()">
+    Add
+  </button>
+</div>
+
+<ul class="students">
+    <li *ngFor="let s of roles; let i=index;">
+      <a routerLink="/role-details/{{s.id_Role}}">
+        <span class="badge">{{i+1}}</span> {{s.name}}
+      </a>
+      <button class="delete" title="delete User"
+        (click)="delete(s.id_Role)">x</button>
+    </li>
+  </ul>
+  
