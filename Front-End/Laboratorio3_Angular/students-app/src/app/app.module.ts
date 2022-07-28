@@ -12,6 +12,9 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { StudentAddValidateComponent } from './student-add-validate/student-add-validate.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserAddComponent } from './user-add/user-add.component';
+import { VehiculeAddComponent } from './vehicule-add/vehicule-add.component';
+import { VehiculeListComponent } from './vehicule-list/vehicule-list.component';
+import { VehiculeDetailsComponent } from './vehicule-details/vehicule-details.component';
 
 
 const appRoutes: Routes = [
@@ -41,6 +44,21 @@ const appRoutes: Routes = [
     data: { title: 'User Add' }
   },
   {
+    path: 'vehicule-add',
+    component: VehiculeAddComponent,
+    data: { title: 'Vehicule Add' }
+  },
+  {
+    path: 'vehicule-details',
+    component: VehiculeDetailsComponent,
+    data: { title: 'Vehicule Details' }
+  },
+  {
+    path: 'vehicule-list',
+    component: VehiculeListComponent,
+    data: { title: 'Vehicule List' }
+  },
+  {
     path: 'student-details/:id',
     component: StudentDetailsComponent,
     data: {title: 'Student Details'}
@@ -60,7 +78,10 @@ const appRoutes: Routes = [
     StudentDetailsComponent,
     StudentAddValidateComponent,
     UserListComponent,
-    UserAddComponent
+    UserAddComponent,
+    VehiculeAddComponent,
+    VehiculeListComponent,
+    VehiculeDetailsComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),

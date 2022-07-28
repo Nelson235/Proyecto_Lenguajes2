@@ -3,26 +3,27 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { StudentServiceService } from '../student-service.service';
 
 @Component({
-  selector: 'app-user-add',
-  templateUrl: './user-add.component.html',
-  styleUrls: ['./user-add.component.css']
+  selector: 'app-vehicule-add',
+  templateUrl: './vehicule-add.component.html',
+  styleUrls: ['./vehicule-add.component.css']
 })
-export class UserAddComponent implements OnInit {
+export class VehiculeAddComponent implements OnInit {
 
-  
-  @Input() userData ={id:0,name:'',lastName:'',telephone:'',address:'',email:'',password:'',id_Role:1}
+  @Input() vehiculeData ={id_vehicule:0,license_plate:'',color:'',brand:'',Id_User:0,Id_Type:0}
+
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  addUser(){
+  addVehicule(){
 
-    this.rest.add_User(this.userData).subscribe((result) => {
+    this.rest.add_Vehicule(this.vehiculeData).subscribe((result) => {
       this.router.navigate(['/user-list']);
     }, (err) => {
       console.log(err);
     });
+
   }
 
 }
