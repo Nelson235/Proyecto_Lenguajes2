@@ -1,0 +1,17 @@
+<h2>Space List</h2>
+
+<div>
+  <button (click)="add()">
+    Add
+  </button>
+</div>
+
+<ul class="students">
+  <li *ngFor="let s of spaces; let i=index;">
+    <a routerLink="/space-details/{{s.id_Space}}">
+      <span class="badge">{{i+1}}</span> {{s.number}}
+    </a>
+    <button class="delete" title="delete student"
+      (click)="delete(s.id_Space)">x</button>
+  </li>
+</ul>

@@ -21,6 +21,12 @@ import { VehiculeTypeDetailsComponent } from './vehicule-type-details/vehicule-t
 import { RateListComponent } from './rate-list/rate-list.component';
 import { RateAddComponent } from './rate-add/rate-add.component';
 import { RateDetailsComponent } from './rate-details/rate-details.component';
+import { RoleListComponent } from './role-list/role-list.component';
+import { RoleAddComponent } from './role-add/role-add.component';
+import { RoleDetailsComponent } from './role-details/role-details.component';
+import { SpaceListComponent } from './space-list/space-list.component';
+import { SpaceAddComponent } from './space-add/space-add.component';
+import { SpaceDetailsComponent } from './space-details/space-details.component';
 
 
 const appRoutes: Routes = [
@@ -75,9 +81,39 @@ const appRoutes: Routes = [
     data: { title: 'Rate Add' }
   },
   {
-    path: 'rate-details',
+    path: 'rate-details/:id',
     component: RateDetailsComponent,
     data: { title: 'Rate Details' }
+  },
+  {
+    path: 'space-list',
+    component: SpaceListComponent,
+    data: { title: 'Space List' }
+  },
+  {
+    path: 'space-add',
+    component: SpaceAddComponent,
+    data: { title: 'Space Add' }
+  },
+  {
+    path: 'space-details/:id',
+    component: SpaceDetailsComponent,
+    data: { title: 'Space Details' }
+  },
+  {
+    path: 'role-list',
+    component: RoleListComponent,
+    data: { title: 'Role List' }
+  },
+  {
+    path: 'role-add',
+    component: RoleAddComponent,
+    data: { title: 'Role Add' }
+  },
+  {
+    path: 'role-details/:id',
+    component: RoleDetailsComponent,
+    data: { title: 'Role Details' }
   },
   {
     path: 'vehicule-type-list',
@@ -123,7 +159,13 @@ const appRoutes: Routes = [
     VehiculeTypeDetailsComponent,
     RateListComponent,
     RateAddComponent,
-    RateDetailsComponent
+    RateDetailsComponent,
+    RoleListComponent,
+    RoleAddComponent,
+    RoleDetailsComponent,
+    SpaceListComponent,
+    SpaceAddComponent,
+    SpaceDetailsComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),
