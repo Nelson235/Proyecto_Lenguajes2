@@ -1,11 +1,11 @@
 <div *ngIf="space" class="Parking">
     <h2>{{space.number | uppercase}} Details</h2>
-    <div><span>Id_Type: </span>{{space.id_Type}}</div>
+    <div><span>Id_Type: </span>{{space.id_Type.name}}</div>
     <div><span>Status: </span>{{space.status}}</div>
-    <div><span>Id_Vehicule: </span>{{space.id_vehicule}}</div>
-    <div><span>Id_Parking: </span>{{space.id_Parking}}</div>
+    <div><span>Id_Vehicule: </span>{{space.id_Vehicule.license_Plate}}</div>
+    <div><span>Id_Parking: </span>{{space.id_Parking.name}}</div>
     <div><span>Check_In: </span>{{space.check_In}}</div>
-    <div><span>Id_Rate: </span>{{space.id_Rate}}</div>
+    <div><span>Id_Rate: </span>{{space.id_Rate.id_Rate}}</div>
     <div>
       <button routerLink="/student-update/{{space.id_Space}}">
         Edit

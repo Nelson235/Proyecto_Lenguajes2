@@ -9,7 +9,7 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class SpaceAddComponent implements OnInit {
 
-  @Input() spaceData ={id_Space:0,number:0,id_Type:0,status:'',id_vehicule:0,id_Parking:0,check_In:'',id_Rate:0}
+  @Input() spaceData ={id:0,number:0,id_Type:1,status:'',id_Vehicule:21,id_Parking:51,check_In:'',id_Rate:1}
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

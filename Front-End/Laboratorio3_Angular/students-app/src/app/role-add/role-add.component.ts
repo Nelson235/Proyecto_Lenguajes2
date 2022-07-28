@@ -9,7 +9,7 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class RoleAddComponent implements OnInit {
 
-  @Input() roleData ={id_Role:0,name:''}
+  @Input() roleData ={id:0,name:''}
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

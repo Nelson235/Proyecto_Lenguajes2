@@ -24,9 +24,9 @@ public class RoleController {
     }
 
     @GetMapping("/GetRole/{id}")
-    public ResponseEntity<Role> get(@PathVariable Integer id_Role) {
+    public ResponseEntity<Role> get(@PathVariable Integer id) {
         try {
-            Role role = service.get(id_Role);
+            Role role = service.get(id);
             return new ResponseEntity<Role>(role, HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<Role>(HttpStatus.NOT_FOUND);

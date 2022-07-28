@@ -167,46 +167,44 @@ getById_Rate(id:any): Observable<any> {
 
 get_Roles(): Observable<any> {
 
-  return this.http.get(endpoint2+'User/GetUsers',httpOptions)
+  return this.http.get(endpoint2+'Role/GetRole',httpOptions)
 
 }
 
 delete_role(id_Role: number): Observable<any> {
-  return this.http.delete(endpoint2+'User/DeleteUser/'+id_Role,httpOptions)
+  return this.http.delete(endpoint2+'Role/delete/'+id_Role,httpOptions)
   .pipe(
-    catchError(this.handleError('DeleteUser'))
+    catchError(this.handleError('DeleteRole'))
   );
 }
 
 add_Role(role: any){
-  return this.http.post(endpoint2+'User/', role, httpOptions)
+  return this.http.post(endpoint2+'Role/', role, httpOptions)
 }
 
 getById_Role(id:any): Observable<any> {
-  return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
+  return this.http.get(endpoint2+'Role/GetRole/'+id,httpOptions)
 }
 
 
 /////////////////////////SPACE////////////
 
 get_Spaces(): Observable<any> {
-
-  return this.http.get(endpoint2+'User/GetUsers',httpOptions)
-
+  return this.http.get(endpoint2+'Space/GetSpace',httpOptions)
 }
 
 delete_Space(id_Space: number): Observable<any> {
-  return this.http.delete(endpoint2+'User/DeleteUser/'+id_Space,httpOptions)
+  return this.http.delete(endpoint2+'Space/delete/'+id_Space,httpOptions)
   .pipe(
-    catchError(this.handleError('DeleteUser'))
+    catchError(this.handleError('DeleteSpace'))
   );
 }
 
 add_Space(Space: any){
-  return this.http.post(endpoint2+'User/', Space, httpOptions)
+  return this.http.post(endpoint2+'Space/', Space, httpOptions)
 }
 
 getById_Space(id:any): Observable<any> {
-  return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
+  return this.http.get(endpoint2+'Space/GetSpace/'+id,httpOptions)
 }
 }

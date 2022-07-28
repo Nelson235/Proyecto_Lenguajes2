@@ -36,7 +36,7 @@ add_Role(){
 
 delete(id_role:number)
 {
-  this.rest.delete_Rate(id_role)
+  this.rest.delete_role(id_role)
   .subscribe( 
     (data) =>{
       console.log(data);

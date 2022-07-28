@@ -13,7 +13,7 @@ export class RoleDetailsComponent implements OnInit {
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.rest.getById_Role(this.route.snapshot.params['id_Role']).subscribe((data: {}) => {
+    this.rest.getById_Role(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.role = data;
     });

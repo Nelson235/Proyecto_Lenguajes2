@@ -13,7 +13,7 @@ export class SpaceDetailsComponent implements OnInit {
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.rest.getById_Space(this.route.snapshot.params['id_Space']).subscribe((data: {}) => {
+    this.rest.getById_Space(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.space = data;
     });
