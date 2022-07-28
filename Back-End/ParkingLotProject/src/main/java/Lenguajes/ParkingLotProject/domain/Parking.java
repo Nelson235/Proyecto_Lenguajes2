@@ -23,7 +23,10 @@ public class Parking {
 
     public Parking(){}
 
-
+    public Parking(int id_Parking){
+        super();
+        this.id_Parking = id_Parking;
+    }
     public Parking(int id_Parking,int capacity,  String district,String name_Parking,String province) {
         this.setId_Parking(id_Parking);
         this.setName_Parking(name_Parking);

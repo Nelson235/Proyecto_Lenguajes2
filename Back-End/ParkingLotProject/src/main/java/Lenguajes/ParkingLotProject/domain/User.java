@@ -26,6 +26,10 @@ public class User {
     @JoinColumn(name="Id_Role")
     private Role id_Role;
     public User(){}
+    public User(int id_User){
+        super();
+        this.id_User = id_User;
+    }
 
     public User(int id_User, String name, String lastName, String telephone, String address, String email, String password, Role id_Role) {
      this.setId_User(id_User);
