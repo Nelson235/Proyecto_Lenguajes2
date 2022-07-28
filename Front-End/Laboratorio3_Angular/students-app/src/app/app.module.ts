@@ -15,6 +15,7 @@ import { UserAddComponent } from './user-add/user-add.component';
 import { VehiculeAddComponent } from './vehicule-add/vehicule-add.component';
 import { VehiculeListComponent } from './vehicule-list/vehicule-list.component';
 import { VehiculeDetailsComponent } from './vehicule-details/vehicule-details.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
@@ -64,8 +65,13 @@ const appRoutes: Routes = [
     data: {title: 'Student Details'}
   
   },
+  {
+    path: 'login',
+    component:LoginComponent,
+    data: { title: 'Parking Login' }
+  },
   { path: '',
-    redirectTo: '/students',
+    redirectTo: '/login',
     pathMatch: 'full'
   }
 ];
@@ -81,7 +87,8 @@ const appRoutes: Routes = [
     UserAddComponent,
     VehiculeAddComponent,
     VehiculeListComponent,
-    VehiculeDetailsComponent
+    VehiculeDetailsComponent,
+    LoginComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),
