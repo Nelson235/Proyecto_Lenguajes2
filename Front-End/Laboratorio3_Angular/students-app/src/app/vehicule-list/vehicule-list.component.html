@@ -1,0 +1,17 @@
+<p>Vehicules</p>
+
+<div>
+  <button (click)="add_Vehicule()">
+    Add Vehicules
+  </button>
+</div>
+
+<ul class="students">
+    <li *ngFor="let s of vehicules; let i=index;">
+      <a routerLink="/vehicule-details/{{s.id_Vehicule}}">
+        <span class="badge">{{i+1}}</span> {{s.license_Plate}}
+      </a>
+      <button class="delete" title="delete User"
+        (click)="delete(s.id_Vehicule)">x</button>
+    </li>
+  </ul>
