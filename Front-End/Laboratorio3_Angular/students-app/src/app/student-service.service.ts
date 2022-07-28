@@ -185,4 +185,27 @@ getById_VehiculeType(id:any): Observable<any> {
   return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
 }
 
+/////////////////////////RATE////////////
+
+get_Rates(): Observable<any> {
+
+  return this.http.get(endpoint2+'User/GetUsers',httpOptions)
+
+}
+
+delete_Rate(id_VehiculeType: number): Observable<any> {
+  return this.http.delete(endpoint2+'User/DeleteUser/'+id_VehiculeType,httpOptions)
+  .pipe(
+    catchError(this.handleError('DeleteUser'))
+  );
+}
+
+add_Rate(vehiculeType: any){
+  return this.http.post(endpoint2+'User/', vehiculeType, httpOptions)
+}
+
+getById_Rate(id:any): Observable<any> {
+  return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
+}
+
 }
