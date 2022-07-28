@@ -143,23 +143,23 @@ getById_User(id:any): Observable<any> {
 
 get_Vehicule(): Observable<any> {
 
-  return this.http.get(endpoint2+'User/GetUsers',httpOptions)
+  return this.http.get(endpoint2+'Vehicule/GetVehicules',httpOptions)
 
 }
 
 delete_Vehicule(id_Vehicule: number): Observable<any> {
-  return this.http.delete(endpoint2+'User/DeleteUser/'+id_Vehicule,httpOptions)
+  return this.http.delete(endpoint2+'Vehicule/DeleteVehicule/'+id_Vehicule,httpOptions)
   .pipe(
-    catchError(this.handleError('DeleteUser'))
+    catchError(this.handleError('DeleteVehicule'))
   );
 }
 
 add_Vehicule(vehicule: any){
-  return this.http.post(endpoint2+'User/', vehicule, httpOptions)
+  return this.http.post(endpoint2+'Vehicule/', vehicule, httpOptions)
 }
 
 getById_Vehicule(id:any): Observable<any> {
-  return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
+  return this.http.get(endpoint2+'Vehicule/GetVehicule/'+id,httpOptions)
 }
 
 

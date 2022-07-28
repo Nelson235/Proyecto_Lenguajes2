@@ -49,7 +49,7 @@ const appRoutes: Routes = [
     data: { title: 'Vehicule Add' }
   },
   {
-    path: 'vehicule-details',
+    path: 'vehicule-details/:id',
     component: VehiculeDetailsComponent,
     data: { title: 'Vehicule Details' }
   },
