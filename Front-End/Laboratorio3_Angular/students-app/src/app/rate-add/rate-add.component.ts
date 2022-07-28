@@ -9,7 +9,7 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class RateAddComponent implements OnInit {
 
-  @Input() rateData ={id_rate:0,id_Type:0,per_Hour:0,per_HalfHour:0,per_Day:0,per_Week:0,per_Month:0,per_Year:0}
+  @Input() rateData ={id:0,id_Type:1,per_Hour:0,per_HalfHour:0,per_Day:0,per_Week:0,per_Month:0,per_Year:0}
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

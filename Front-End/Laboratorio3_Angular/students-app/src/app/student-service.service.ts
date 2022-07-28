@@ -26,26 +26,13 @@ export class StudentServiceService {
 
   }
 
-  /*get(): Observable<any> {
-
-    return this.http.get(endpoint+'Parking/GetParking',httpOptions)
-
-  }*/
+ //******************PARKING**************************** */
 
   get(): Observable<any> {
 
     return this.http.get(endpoint2+'Parking/GetParking',httpOptions)
 
   }
-
-
-
- /* delete(idParking: number): Observable<any> {
-    return this.http.delete(endpoint+'Parking/DeleteParking/'+idParking,httpOptions)
-    .pipe(
-      catchError(this.handleError('DeleteParking'))
-    );
-  }*/
 
   delete(id: number): Observable<any> {
     return this.http.delete(endpoint2+'Parking/delete/'+id,httpOptions)
@@ -54,11 +41,6 @@ export class StudentServiceService {
     );
   }
 
-
- /* add(parking: any){
-    return this.http.post(endpoint+'Parking/', parking, httpOptions)
-  }*/
-
   add(parking: any){
     return this.http.post(endpoint2+'Parking/', parking, httpOptions)
   }
@@ -66,12 +48,6 @@ export class StudentServiceService {
   add_User2(id:number,parking: any){
     return this.http.put(endpoint2+'Parking/update/'+id, parking, httpOptions)
   }
-
-  
-
- /* getById(id:any): Observable<any> {
-    return this.http.get(endpoint+'Parking/GetParking/'+id,httpOptions)
-  }*/
 
   getById(id:any): Observable<any> {
     return this.http.get(endpoint2+'Parking/GetParking/'+id,httpOptions)
@@ -95,11 +71,6 @@ export class StudentServiceService {
 
 /////////////////////////USER////////////
 
-/*get_User(): Observable<any> {
-
-  return this.http.get(endpoint+'User/GetUsers',httpOptions)
-
-}*/
 
 get_User(): Observable<any> {
 
@@ -107,12 +78,6 @@ get_User(): Observable<any> {
 
 }
 
-/*delete_User(idUser: number): Observable<any> {
-  return this.http.delete(endpoint+'User/DeleteUser/'+idUser,httpOptions)
-  .pipe(
-    catchError(this.handleError('DeleteUser'))
-  );
-}*/
 
 delete_User(id_User: number): Observable<any> {
   return this.http.delete(endpoint2+'User/DeleteUser/'+id_User,httpOptions)
@@ -121,19 +86,9 @@ delete_User(id_User: number): Observable<any> {
   );
 }
 
-/*add_User(user: any){
-  return this.http.post(endpoint+'User/', user, httpOptions)
-}*/
-
 add_User(user: any){
   return this.http.post(endpoint2+'User/', user, httpOptions)
 }
-
-
-
-/*getById_User(id:any): Observable<any> {
-  return this.http.get(endpoint+'User/GetUser/'+id,httpOptions)
-}*/
 
 getById_User(id:any): Observable<any> {
   return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
@@ -166,46 +121,46 @@ getById_Vehicule(id:any): Observable<any> {
 
 get_VehiculeType(): Observable<any> {
 
-  return this.http.get(endpoint2+'User/GetUsers',httpOptions)
+  return this.http.get(endpoint2+'Vehicule_Type/GetVehicule_Type',httpOptions)
 
 }
 
 delete_VehiculeType(id_VehiculeType: number): Observable<any> {
-  return this.http.delete(endpoint2+'User/DeleteUser/'+id_VehiculeType,httpOptions)
+  return this.http.delete(endpoint2+'Vehicule_Type/delete/'+id_VehiculeType,httpOptions)
   .pipe(
-    catchError(this.handleError('DeleteUser'))
+    catchError(this.handleError('Vehicule_Type'))
   );
 }
 
 add_VehiculeType(vehiculeType: any){
-  return this.http.post(endpoint2+'User/', vehiculeType, httpOptions)
+  return this.http.post(endpoint2+'Vehicule_Type/', vehiculeType, httpOptions)
 }
 
 getById_VehiculeType(id:any): Observable<any> {
-  return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
+  return this.http.get(endpoint2+'Vehicule_Type/GetVehicule_Type/'+id,httpOptions)
 }
 
 /////////////////////////RATE////////////
 
 get_Rates(): Observable<any> {
 
-  return this.http.get(endpoint2+'User/GetUsers',httpOptions)
+  return this.http.get(endpoint2+'Rate/GetRate',httpOptions)
 
 }
 
 delete_Rate(id_VehiculeType: number): Observable<any> {
-  return this.http.delete(endpoint2+'User/DeleteUser/'+id_VehiculeType,httpOptions)
+  return this.http.delete(endpoint2+'Rate/delete/'+id_VehiculeType,httpOptions)
   .pipe(
-    catchError(this.handleError('DeleteUser'))
+    catchError(this.handleError('DeleteRate'))
   );
 }
 
 add_Rate(vehiculeType: any){
-  return this.http.post(endpoint2+'User/', vehiculeType, httpOptions)
+  return this.http.post(endpoint2+'Rate/', vehiculeType, httpOptions)
 }
 
 getById_Rate(id:any): Observable<any> {
-  return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
+  return this.http.get(endpoint2+'Rate/GetRate/'+id,httpOptions)
 }
 
 /////////////////////////ROLE////////////

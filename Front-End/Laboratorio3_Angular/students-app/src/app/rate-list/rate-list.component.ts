@@ -28,7 +28,7 @@ export class RateListComponent implements OnInit {
 
   add(){
 
-    this.router.navigate(['/Rate-add']);
+    this.router.navigate(['/rate-add']);
   
   }
   

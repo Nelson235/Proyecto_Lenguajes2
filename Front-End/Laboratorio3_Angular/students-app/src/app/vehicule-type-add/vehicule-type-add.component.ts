@@ -9,7 +9,7 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class VehiculeTypeAddComponent implements OnInit {
 
-  @Input() typeData ={id_type:0,name:''}
+  @Input() typeData ={id:0,name:''}
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -17,7 +17,7 @@ export class VehiculeTypeAddComponent implements OnInit {
 
   addVehiculeType(){
 
-    this.rest.add(this.typeData).subscribe((result) => {
+    this.rest.add_VehiculeType(this.typeData).subscribe((result) => {
       this.router.navigate(['/vehicule-type-list']);
     }, (err) => {
       console.log(err);
