@@ -16,6 +16,11 @@ import { VehiculeAddComponent } from './vehicule-add/vehicule-add.component';
 import { VehiculeListComponent } from './vehicule-list/vehicule-list.component';
 import { VehiculeDetailsComponent } from './vehicule-details/vehicule-details.component';
 import { LoginComponent } from './login/login.component';
+import { VehiculeTypeAddComponent } from './vehicule-type-add/vehicule-type-add.component';
+import { VehiculeTypeListComponent } from './vehicule-type-list/vehicule-type-list.component';
+import { VehiculeTypeDetailsComponent } from './vehicule-type-details/vehicule-type-details.component';
+
+
 
 
 const appRoutes: Routes = [
@@ -60,6 +65,21 @@ const appRoutes: Routes = [
     data: { title: 'Vehicule List' }
   },
   {
+    path: 'vehicule-type-list',
+    component: VehiculeTypeListComponent,
+    data: { title: 'Vehicule Type Add' }
+  },
+  {
+    path: 'vehicule-type-add',
+    component: VehiculeTypeAddComponent,
+    data: { title: 'Vehicule Type Add' }
+  },
+  {
+    path: 'vehicule-type-details',
+    component: VehiculeTypeDetailsComponent,
+    data: { title: 'Vehicule Type Details' }
+  },
+  {
     path: 'student-details/:id',
     component: StudentDetailsComponent,
     data: {title: 'Student Details'}
@@ -88,7 +108,11 @@ const appRoutes: Routes = [
     VehiculeAddComponent,
     VehiculeListComponent,
     VehiculeDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    VehiculeTypeListComponent,
+    VehiculeTypeAddComponent,
+    VehiculeTypeDetailsComponent
+
   ],
   imports: [
       RouterModule.forRoot(appRoutes),

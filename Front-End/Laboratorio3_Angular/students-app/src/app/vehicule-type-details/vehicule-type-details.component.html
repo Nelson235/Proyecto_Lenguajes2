@@ -1,0 +1,9 @@
+<div *ngIf="vehiculeType" class="Parking">
+    <h2>{{vehiculeType.name | uppercase}} Details</h2>
+
+    <div>
+      <button routerLink="/student-update/{{vehiculeType.id_Type}}">
+        Edit
+      </button>
+    </div>
+</div>
