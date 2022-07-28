@@ -13,7 +13,7 @@ export class VehiculeTypeDetailsComponent implements OnInit {
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.rest.getById_VehiculeType(this.route.snapshot.params['id_Type']).subscribe((data: {}) => {
+    this.rest.getById_VehiculeType(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.vehiculeType = data;
     });

@@ -78,7 +78,7 @@ const appRoutes: Routes = [
     data: { title: 'Rate Add' }
   },
   {
-    path: 'rate-details',
+    path: 'rate-details/:id',
     component: RateDetailsComponent,
     data: { title: 'Rate Details' }
   },

@@ -13,7 +13,7 @@ export class RateDetailsComponent implements OnInit {
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.rest.getById_Rate(this.route.snapshot.params['id_Rate']).subscribe((data: {}) => {
+    this.rest.getById_Rate(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.rate = data;
     });

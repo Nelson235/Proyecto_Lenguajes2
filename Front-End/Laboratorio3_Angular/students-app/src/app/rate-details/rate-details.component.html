@@ -1,5 +1,5 @@
 <div *ngIf="rate" class="Parking">
-    <h2>{{rate.id_Type | uppercase}} Details</h2>
+    <h2>{{rate.id_Type.name| uppercase}} Details</h2>
     <div><span>Per_Hour:</span>{{rate.per_Hour}}</div>
     <div><span>Per_HalfHour: </span>{{rate.per_HalfHour}}</div>
     <div><span>Per_Day: </span>{{rate.per_Day}}</div>
