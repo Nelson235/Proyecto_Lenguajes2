@@ -25,12 +25,17 @@ export class LoginService {
 
     getUsers(): Observable<any> {
 
-        return this.http.get(endpoint + 'User/GetUsers', httpOptions)
+        return this.http.get(endpoint2 + 'User/GetUsers', httpOptions)
 
     }
 
+    getByEmail_User(email:any): Observable<any> {
+        return this.http.get(endpoint2+'User/GetUserByEmail/'+email,httpOptions)
+      }
+      
+
     getUser(email: any): Observable<any> {
-        return this.http.get(endpoint + 'User/GetUserEmail/' + email, httpOptions)
+        return this.http.get(endpoint2 + 'User/GetUserEmail/' + email, httpOptions)
             .pipe(
                 catchError(this.handleError('getUserEmail'))
             );

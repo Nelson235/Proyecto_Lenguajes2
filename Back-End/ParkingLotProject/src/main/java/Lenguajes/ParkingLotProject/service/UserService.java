@@ -26,7 +26,6 @@ public class UserService {
     public User get(int id_User) {
         return repository.findById(id_User).get();
     }
-
     public void delete(int id_User) {
         repository.deleteById(id_User);
     }

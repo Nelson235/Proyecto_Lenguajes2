@@ -28,6 +28,7 @@ import { RoleDetailsComponent } from './role-details/role-details.component';
 import { SpaceListComponent } from './space-list/space-list.component';
 import { SpaceAddComponent } from './space-add/space-add.component';
 import { SpaceDetailsComponent } from './space-details/space-details.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -57,6 +58,11 @@ const appRoutes: Routes = [
     path: 'user-add',
     component: UserAddComponent,
     data: { title: 'User Add' }
+  },
+  {
+    path: 'user-details/:email',
+    component: UserDetailsComponent,
+    data: { title: 'User Details' }
   },
   {
     path: 'vehicule-add',
@@ -145,7 +151,7 @@ const appRoutes: Routes = [
     data: { title: 'Parking Login' }
   },
   { path: '',
-    redirectTo: '/login',
+    redirectTo: '/student-list',
     pathMatch: 'full'
   }
 ];
@@ -174,7 +180,8 @@ const appRoutes: Routes = [
     RoleDetailsComponent,
     SpaceListComponent,
     SpaceAddComponent,
-    SpaceDetailsComponent
+    SpaceDetailsComponent,
+    UserDetailsComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),
