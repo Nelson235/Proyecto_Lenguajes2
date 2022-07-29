@@ -32,13 +32,13 @@ export class LoginComponent implements OnInit {
       if(this.user.password==this.userData.password){
         switch (this.user.id_Role.id_Role) {
           case 1:
-            this.adminPrincipal();
+            this.userPrincipal();
             break;
           case 2:
-            this.assistantPrincipal();
+            this.adminPrincipal();
             break;
           case 3:
-              this.clientPrincipal();
+              this.depenPrincipal();
               break;
           default:
             break;
@@ -48,16 +48,16 @@ export class LoginComponent implements OnInit {
   }
 }
 
+  userPrincipal(){
+    this.router.navigate(['menu-user']);
+  }
+
   adminPrincipal(){
-    this.router.navigate(['menu-admin']);
+    this.router.navigate(['/menu-admin']);
   }
 
-  assistantPrincipal(){
-    this.router.navigate(['/menu-user']);
-  }
-
-  clientPrincipal(){
-    this.router.navigate(['/menu-user']);
+  depenPrincipal(){
+    this.router.navigate(['/menu-depen']);
   }
 
 }
