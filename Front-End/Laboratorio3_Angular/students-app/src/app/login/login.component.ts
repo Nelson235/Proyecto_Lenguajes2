@@ -49,15 +49,15 @@ export class LoginComponent implements OnInit {
 }
 
   adminPrincipal(){
-    this.router.navigate(['/user-list']);
+    this.router.navigate(['menu-admin']);
   }
 
   assistantPrincipal(){
-    this.router.navigate(['/user-list']);
+    this.router.navigate(['/menu-user']);
   }
 
   clientPrincipal(){
-    this.router.navigate(['/user-list']);
+    this.router.navigate(['/menu-user']);
   }
 
 }
