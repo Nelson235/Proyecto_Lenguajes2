@@ -9,7 +9,7 @@ import { LoginService } from './login-service';
 })
 export class LoginComponent implements OnInit {
 
-  @Input() userData = {name:'', password:''};
+  @Input() userData = {email:'', password:''};
   user:any;
 
   constructor(public rest: LoginService, private route: ActivatedRoute, private router: Router) { }
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   getUser(){
     this.user  = '';
-    this.rest.getUser(this.userData.name).subscribe((data:{}) => {
+    this.rest.getByEmail_User(this.userData.email).subscribe((data:{}) => {
         console.log(data);
         this.user = data;
         this.isValidUser();
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     if (typeof(this.user) !== 'undefined') {
 
       if(this.user.password==this.userData.password){
-        switch (this.user.idRole) {
+        switch (this.user.id_Role.id_Role) {
           case 1:
             this.adminPrincipal();
             break;

@@ -8,7 +8,7 @@
 
 <ul class="students">
     <li *ngFor="let s of users; let i=index;">
-      <a routerLink="/student-details/{{s.id_User}}">
+      <a routerLink="/user-details/{{s.email}}">
         <span class="badge">{{i+1}}</span> {{s.name}}
       </a>
       <button class="delete" title="delete User"

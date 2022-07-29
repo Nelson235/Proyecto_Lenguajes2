@@ -93,6 +93,9 @@ add_User(user: any){
 getById_User(id:any): Observable<any> {
   return this.http.get(endpoint2+'User/GetUser/'+id,httpOptions)
 }
+getByEmail_User(email:any): Observable<any> {
+  return this.http.get(endpoint2+'User/GetUserByEmail/'+email,httpOptions)
+}
 
 /////////////////////////VEHICULE////////////
 
