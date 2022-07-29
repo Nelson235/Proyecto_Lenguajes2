@@ -36,9 +36,9 @@ export class VehiculeTypeListComponent implements OnInit {
   }
   
   
-  delete(id_VehiculeType:number)
+  delete(id_Type:number)
   {
-    this.rest.delete_VehiculeType(id_VehiculeType)
+    this.rest.delete_VehiculeType(id_Type)
     .subscribe( 
       (data) =>{
         console.log(data);

@@ -6,7 +6,7 @@
   </button>
 </div>
 
-<ul class="students">
+<!--<ul class="students">
   <li *ngFor="let s of spaces; let i=index;">
     <a routerLink="/space-details/{{s.id_Space}}">
       <span class="badge">{{i+1}}</span> {{s.status}}
@@ -14,4 +14,46 @@
     <button class="delete" title="delete student"
       (click)="delete(s.id_Space)">x</button>
   </li>
-</ul>
+</ul>-->
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Usuarios</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Numero</th>
+            <th>Tipo</th>
+            <th>Status</th>
+            <th>Vehiculo</th>
+            <th>Parqueo</th>
+            <th>Hora</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of spaces; let i=index;" class="text-center">
+            <td>{{s.id_Space}}</td>
+            <td>{{s.number}}</td>
+            <td>{{s.id_Type.name}}</td>
+            <td>{{s.status}}</td>
+            <td>{{s.id_Vehicule.license_Plate}}</td>
+            <td>{{s.id_Parking.name}}</td>
+            <td>{{s.check_In}}</td>
+            <td>{{s.id_Rate.id_Type.name}}</td>
+            
+            <td>
+              <button class="btn btn-warming">Editar</button>
+              <button class="btn btn-info" (click)="delete(s.id_Type)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
