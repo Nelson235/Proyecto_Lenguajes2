@@ -12,6 +12,25 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { StudentAddValidateComponent } from './student-add-validate/student-add-validate.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserAddComponent } from './user-add/user-add.component';
+import { VehiculeAddComponent } from './vehicule-add/vehicule-add.component';
+import { VehiculeListComponent } from './vehicule-list/vehicule-list.component';
+import { VehiculeDetailsComponent } from './vehicule-details/vehicule-details.component';
+import { LoginComponent } from './login/login.component';
+import { VehiculeTypeAddComponent } from './vehicule-type-add/vehicule-type-add.component';
+import { VehiculeTypeListComponent } from './vehicule-type-list/vehicule-type-list.component';
+import { VehiculeTypeDetailsComponent } from './vehicule-type-details/vehicule-type-details.component';
+import { RateListComponent } from './rate-list/rate-list.component';
+import { RateAddComponent } from './rate-add/rate-add.component';
+import { RateDetailsComponent } from './rate-details/rate-details.component';
+import { RoleListComponent } from './role-list/role-list.component';
+import { RoleAddComponent } from './role-add/role-add.component';
+import { RoleDetailsComponent } from './role-details/role-details.component';
+import { SpaceListComponent } from './space-list/space-list.component';
+import { SpaceAddComponent } from './space-add/space-add.component';
+import { SpaceDetailsComponent } from './space-details/space-details.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+
+
 
 
 const appRoutes: Routes = [
@@ -41,13 +60,98 @@ const appRoutes: Routes = [
     data: { title: 'User Add' }
   },
   {
+    path: 'user-details/:email',
+    component: UserDetailsComponent,
+    data: { title: 'User Details' }
+  },
+  {
+    path: 'vehicule-add',
+    component: VehiculeAddComponent,
+    data: { title: 'Vehicule Add' }
+  },
+  {
+    path: 'vehicule-details/:id',
+    component: VehiculeDetailsComponent,
+    data: { title: 'Vehicule Details' }
+  },
+  {
+    path: 'vehicule-list',
+    component: VehiculeListComponent,
+    data: { title: 'Vehicule List' }
+  },
+  {
+    path: 'rate-list',
+    component: RateListComponent,
+    data: { title: 'Rate List' }
+  },
+  {
+    path: 'rate-add',
+    component: RateAddComponent,
+    data: { title: 'Rate Add' }
+  },
+  {
+    path: 'rate-details/:id',
+    component: RateDetailsComponent,
+    data: { title: 'Rate Details' }
+  },
+  {
+    path: 'space-list',
+    component: SpaceListComponent,
+    data: { title: 'Space List' }
+  },
+  {
+    path: 'space-add',
+    component: SpaceAddComponent,
+    data: { title: 'Space Add' }
+  },
+  {
+    path: 'space-details/:id',
+    component: SpaceDetailsComponent,
+    data: { title: 'Space Details' }
+  },
+  {
+    path: 'role-list',
+    component: RoleListComponent,
+    data: { title: 'Role List' }
+  },
+  {
+    path: 'role-add',
+    component: RoleAddComponent,
+    data: { title: 'Role Add' }
+  },
+  {
+    path: 'role-details/:id',
+    component: RoleDetailsComponent,
+    data: { title: 'Role Details' }
+  },
+  {
+    path: 'vehicule-type-list',
+    component: VehiculeTypeListComponent,
+    data: { title: 'Vehicule Type Add' }
+  },
+  {
+    path: 'vehicule-type-add',
+    component: VehiculeTypeAddComponent,
+    data: { title: 'Vehicule Type Add' }
+  },
+  {
+    path: 'vehicule-type-details/:id',
+    component: VehiculeTypeDetailsComponent,
+    data: { title: 'Vehicule Type Details' }
+  },
+  {
     path: 'student-details/:id',
     component: StudentDetailsComponent,
     data: {title: 'Student Details'}
   
   },
+  {
+    path: 'login',
+    component:LoginComponent,
+    data: { title: 'Parking Login' }
+  },
   { path: '',
-    redirectTo: '/students',
+    redirectTo: '/student-list',
     pathMatch: 'full'
   }
 ];
@@ -60,7 +164,24 @@ const appRoutes: Routes = [
     StudentDetailsComponent,
     StudentAddValidateComponent,
     UserListComponent,
-    UserAddComponent
+    UserAddComponent,
+    VehiculeAddComponent,
+    VehiculeListComponent,
+    VehiculeDetailsComponent,
+    LoginComponent,
+    VehiculeTypeListComponent,
+    VehiculeTypeAddComponent,
+    VehiculeTypeDetailsComponent,
+    RateListComponent,
+    RateAddComponent,
+    RateDetailsComponent,
+    RoleListComponent,
+    RoleAddComponent,
+    RoleDetailsComponent,
+    SpaceListComponent,
+    SpaceAddComponent,
+    SpaceDetailsComponent,
+    UserDetailsComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),

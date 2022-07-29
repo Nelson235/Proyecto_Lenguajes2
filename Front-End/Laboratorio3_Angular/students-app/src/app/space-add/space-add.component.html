@@ -1,0 +1,27 @@
+<div>
+    <h2>Space Add</h2>
+    <label>Number:
+      <input [(ngModel)]="spaceData.number"  placeholder="number space"/>
+    </label><br>
+    <label>id_Type:
+      <input [(ngModel)]="spaceData.id_Type"  placeholder="id_Type"/>
+    </label><br>
+    <label>status:
+      <input [(ngModel)]="spaceData.status"  placeholder="status"/>
+    </label><br>
+    <label>id_vehicule:
+      <input [(ngModel)]="spaceData.id_Vehicule"  placeholder="id_vehicule"/>
+    </label><br>
+    <label>id_Parking:
+      <input [(ngModel)]="spaceData.id_Parking"  placeholder="id_Parking"/>
+    </label><br>
+    <label>check_In:
+      <input [(ngModel)]="spaceData.check_In" type="datetime"  placeholder="check_In"/>
+    </label><br>
+    <label>id_Rate:
+      <input [(ngModel)]="spaceData.id_Rate"  placeholder="id_Rate"/>
+    </label><br>
+  
+      <button (click)="addSpace()">Save</button>
+      
+  </div>

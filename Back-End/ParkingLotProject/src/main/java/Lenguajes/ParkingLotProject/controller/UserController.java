@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import Lenguajes.ParkingLotProject.service.UserService;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -23,6 +24,25 @@ public class UserController {
         return service.listAll();
     }
 
+
+    @GetMapping("/GetUserByEmail/{email}")
+    public ResponseEntity<User> getEmail(@PathVariable String email) {
+        try {
+            User user = null;
+           List<User> users = list();
+            for (int i=0;i<users.size();i++) {
+
+                if(users.get(i).getEmail().equals(email)){
+                     user = users.get(i);
+                    return new ResponseEntity<User>(user, HttpStatus.OK);
+
+                }
+            }
+            return new ResponseEntity<User>(user, HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+        }
+    }
     @GetMapping("/GetUser/{id}")
     public ResponseEntity<User> get(@PathVariable Integer id) {
         try {
@@ -33,7 +53,7 @@ public class UserController {
         }
     }
 
-    @PostMapping("/authenticate")
+    @PostMapping("/")
     public void add(@RequestBody User user) {
         service.save(user);
     }

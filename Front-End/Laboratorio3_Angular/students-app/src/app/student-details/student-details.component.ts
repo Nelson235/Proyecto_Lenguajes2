@@ -9,13 +9,13 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class StudentDetailsComponent implements OnInit {
 
-  student:any;
+  parking:any;
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.rest.getById(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
-      this.student = data;
+      this.parking = data;
     });
   }
 

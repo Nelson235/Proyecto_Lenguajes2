@@ -9,7 +9,8 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class UserAddComponent implements OnInit {
 
-  @Input() userData ={id:0,Name:'',LastName:'',Telephone:'',Adress:'',Email:'',Password:'',Id_role:1}
+
+  @Input() userData ={id:0,name:'',lastName:'',telephone:'',address:'',email:'',password:'',id_Role:1}
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -17,12 +18,11 @@ export class UserAddComponent implements OnInit {
 
   addUser(){
 
-    this.rest.add(this.userData).subscribe((result) => {
+    this.rest.add_User(this.userData).subscribe((result) => {
       this.router.navigate(['/user-list']);
     }, (err) => {
       console.log(err);
     });
-
   }
 
 }

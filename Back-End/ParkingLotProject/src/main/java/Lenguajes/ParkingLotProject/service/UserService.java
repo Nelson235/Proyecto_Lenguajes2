@@ -23,12 +23,11 @@ public class UserService {
         repository.save(user);
     }
 
-    public User get(int id) {
-        return repository.findById(id).get();
+    public User get(int id_User) {
+        return repository.findById(id_User).get();
     }
-
-    public void delete(int id) {
-        repository.deleteById(id);
+    public void delete(int id_User) {
+        repository.deleteById(id_User);
     }
 
 }

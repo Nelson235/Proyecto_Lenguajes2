@@ -3,99 +3,68 @@ package Lenguajes.ParkingLotProject.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name ="[User]")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id_User;
+    private int id_User;
 
-
-    private String Name;
-
-    private String LastName;
-
-    private String Telephone;
-
-    private String Address;
-    private String Email;
-    private String Password;
-    private int Id_Role;
+    @Column(name="Name")
+    private String name;
+    @Column(name="LastName")
+    private String lastName;
+    @Column(name="Telephone")
+    private String telephone;
+    @Column(name="Address")
+    private String address;
+    @Column(name="Email")
+    private String email;
+    @Column(name="Password")
+    private String password;
+    @ManyToOne
+    @JoinColumn(name="Id_Role")
+    private Role id_Role;
     public User(){}
+    public User(int id_User){
+        super();
+        this.id_User = id_User;
+    }
 
-    public User(int id_User, String name, String lastName, String telephone, String address, String email, String password, int id_Role) {
-        Id_User = id_User;
-        Name = name;
-        LastName = lastName;
-        Telephone = telephone;
-        Address = address;
-        Email = email;
-        Password = password;
-        Id_Role = id_Role;
+    public User(int id_User, String name, String lastName, String telephone, String address, String email, String password, Role id_Role) {
+     this.setId_User(id_User);
+     this.setName(name);
+     this.setLastName(lastName);
+     this.setTelephone(telephone);
+     this.setAddress(address);
+     this.setEmail(email);
+     this.setPassword(password);
+     this.setId_Role(id_Role);
     }
 
     public int getId_User() {
-        return Id_User;
+        return id_User;
     }
-
     public void setId_User(int id_User) {
-        Id_User = id_User;
+        this.id_User = id_User;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
+    public void setName(String name){this.name = name;}
 
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getLastName() {
-        return LastName;
-    }
-
-    public void setLastName(String lastName) {
-        LastName = lastName;
-    }
-
-    public String getTelephone() {
-        return Telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        Telephone = telephone;
-    }
-
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String password) {
-        Password = password;
-    }
-
-    public int getId_Role() {
-        return Id_Role;
-    }
-
-    public void setId_Role(int id_Role) {
-        Id_Role = id_Role;
-    }
+    public String getLastName() {return lastName;}
+    public void setLastName(String lastName) {this.lastName = lastName;}
+    public String getTelephone() {return telephone;}
+    public void setTelephone(String telephone) {this.telephone = telephone;}
+    public String getAddress() {return address;}
+    public void setAddress(String address) {this.address = address;}
+    public String getEmail() {return email;}
+    public void setEmail(String email) {this.email = email;}
+    public String getPassword() {return password;}
+    public void setPassword(String password) {this.password = password;}
+    public Role getId_Role() {return id_Role;}
+    public void setId_Role(Role id_Role) {this.id_Role = id_Role;}
 
 }

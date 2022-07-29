@@ -1,0 +1,12 @@
+<div *ngIf="vehicule" class="Vehicule">
+    <h2>{{vehicule.license_Plate | uppercase}} Details</h2>
+    <div><span>Color: </span>{{vehicule.color}}</div>
+    <div><span>Brand: </span>{{vehicule.brand}}</div>
+    <div><span>Id_User: </span>{{vehicule.id_User}}</div>
+    <div><span>Id_Type: </span>{{vehicule.id_Type}}</div>
+    <div>
+      <button routerLink="/student-update/{{vehicule.id_Vehicule}}">
+        Edit
+      </button>
+    </div>
+</div>

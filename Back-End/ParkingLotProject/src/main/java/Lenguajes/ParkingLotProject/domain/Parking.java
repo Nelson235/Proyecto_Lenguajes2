@@ -23,10 +23,13 @@ public class Parking {
 
     public Parking(){}
 
-
+    public Parking(int id_Parking){
+        super();
+        this.id_Parking = id_Parking;
+    }
     public Parking(int id_Parking,int capacity,  String district,String name_Parking,String province) {
         this.setId_Parking(id_Parking);
-        this.setName(name_Parking);
+        this.setName_Parking(name_Parking);
         this.setCapacity(capacity);
         this.setProvince(province);
         this.setDistrict(district);
@@ -35,7 +38,7 @@ public class Parking {
     public int getId_Parking() {return id_Parking;}
     public void setId_Parking(int id_Parking) {this.id_Parking = id_Parking;}
     public String getName() {return name_Parking;}
-    public void setName(String nameParking) {this.name_Parking = nameParking;}
+    public void setName_Parking(String name_Parking) {this.name_Parking = name_Parking;}
     public int getCapacity() {return capacity;}
     public void setCapacity(int capacity) {this.capacity = capacity;}
     public String getProvince() {return province;}

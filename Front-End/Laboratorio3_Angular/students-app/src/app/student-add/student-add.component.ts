@@ -8,7 +8,7 @@ import { StudentServiceService } from '../student-service.service';
   styleUrls: ['./student-add.component.css']
 })
 export class StudentAddComponent implements OnInit {
-  @Input() parkingData ={id:0,nameParking:'',capacity:0,province:'',district:''}
+  @Input() parkingData ={id:0,name_Parking:'',capacity:0,province:'',district:''}
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
