@@ -29,6 +29,12 @@ import { SpaceListComponent } from './space-list/space-list.component';
 import { SpaceAddComponent } from './space-add/space-add.component';
 import { SpaceDetailsComponent } from './space-details/space-details.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';//INPUT
+import { MatSelectModule } from '@angular/material/select';//INPUT
+
 
 
 
@@ -188,8 +194,13 @@ const appRoutes: Routes = [
       BrowserModule,
       FormsModule,
       ReactiveFormsModule,
+      MatTableModule,
+      MatButtonModule,
+      MatInputModule,
+      MatSelectModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

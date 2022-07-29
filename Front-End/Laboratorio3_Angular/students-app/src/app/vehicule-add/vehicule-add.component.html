@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h2>User Add</h2>
     <label>Placa:
       <input [(ngModel)]="vehiculeData.license_Plate"  placeholder="Placa"/>
@@ -18,5 +18,41 @@
 
   
       <button (click)="addVehicule()">Save</button>
+
+      <mat-form-field appearance="fill">
+    <mat-label>Usuarios</mat-label>
+    <mat-select >
+      <mat-option *ngFor="let s of vehicules; let i=index;" >{{s.id_User.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
       
-  </div>
+  </div>-->
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Placa</mat-label>
+    <input matInput [(ngModel)]="vehiculeData.license_Plate">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Color</mat-label>
+    <input matInput [(ngModel)]="vehiculeData.color">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Marca</mat-label>
+    <input matInput [(ngModel)]="vehiculeData.brand">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Usuario id</mat-label>
+    <input matInput [(ngModel)]="vehiculeData.id_User">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Tipo id</mat-label>
+    <input matInput [(ngModel)]="vehiculeData.id_Type">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="accent" (click)="addVehicule()">Añadir</button>
+  

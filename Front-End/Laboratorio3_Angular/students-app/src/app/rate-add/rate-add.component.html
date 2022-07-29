@@ -1,4 +1,4 @@
-<div>
+<!--<div>
     <h2>Rate Add</h2>
     <label>id_Type:
       <input [(ngModel)]="rateData.id_Type"  placeholder="id_Type"/>
@@ -26,4 +26,41 @@
   
       <button (click)="addRate()">Save</button>
       
-  </div>
+  </div>-->
+  <mat-form-field appearance="fill" >
+    <mat-label>Tipo de vehiculo</mat-label>
+    <input matInput [(ngModel)]="rateData.id_Type">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Por hora</mat-label>
+    <input matInput [(ngModel)]="rateData.per_Hour">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Por media hora</mat-label>
+    <input matInput [(ngModel)]="rateData.per_HalfHour">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Por dia</mat-label>
+    <input matInput [(ngModel)]="rateData.per_Day">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Por semana</mat-label>
+    <input matInput [(ngModel)]="rateData.per_Week">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Por mes</mat-label>
+    <input matInput [(ngModel)]="rateData.per_Month">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Por año</mat-label>
+    <input matInput [(ngModel)]="rateData.per_Year">
+  </mat-form-field>
+  <br>
+  
+  <button mat-raised-button color="accent" (click)="addRate()">Añadir</button>

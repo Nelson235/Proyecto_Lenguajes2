@@ -38,7 +38,7 @@
         <tbody>
           <tr *ngFor="let s of spaces; let i=index;" class="text-center">
             <td>{{s.id_Space}}</td>
-            <td>{{s.number}}</td>
+            <td routerLink="/space-details/{{s.id_Space}}">{{s.number}}</td>
             <td>{{s.id_Type.name}}</td>
             <td>{{s.status}}</td>
             <td>{{s.id_Vehicule.license_Plate}}</td>
@@ -47,8 +47,8 @@
             <td>{{s.id_Rate.id_Type.name}}</td>
             
             <td>
-              <button class="btn btn-warming">Editar</button>
-              <button class="btn btn-info" (click)="delete(s.id_Type)">Eliminar</button>
+              <button mat-raised-button color="accent">Editar</button>
+              <button mat-raised-button color="warn" (click)="delete(s.id_Space)">Eliminar</button>
             </td>
           </tr>
         </tbody>
