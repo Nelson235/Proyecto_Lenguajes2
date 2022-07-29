@@ -1,29 +1,37 @@
-<div>
-    <h2>Rate Add</h2>
-    <label>id_Type:
-      <input [(ngModel)]="rateData.id_Type"  placeholder="id_Type"/>
-    </label><br>
-    <label>per_Hour:
-      <input [(ngModel)]="rateData.per_Hour"  placeholder="per_Hour"/>
-    </label><br>
-    <label>per_HalfHour:
-      <input [(ngModel)]="rateData.per_HalfHour"  placeholder="per_HalfHour"/>
-    </label><br>
-    <label>per_Day:
-      <input [(ngModel)]="rateData.per_Day"  placeholder="per_Day"/>
-    </label><br>
-    <label>per_Week:
-        <input [(ngModel)]="rateData.per_Week"  placeholder="per_Week"/>
+<body style="background-color:#193D64">
+
+  <div class="container">
+
+    <div>
+      <h2>Rate Add</h2>
+      <label>id_Type:
+        <input [(ngModel)]="rateData.id_Type" placeholder="id_Type" />
+      </label><br>
+      <label>per_Hour:
+        <input [(ngModel)]="rateData.per_Hour" placeholder="per_Hour" />
+      </label><br>
+      <label>per_HalfHour:
+        <input [(ngModel)]="rateData.per_HalfHour" placeholder="per_HalfHour" />
+      </label><br>
+      <label>per_Day:
+        <input [(ngModel)]="rateData.per_Day" placeholder="per_Day" />
+      </label><br>
+      <label>per_Week:
+        <input [(ngModel)]="rateData.per_Week" placeholder="per_Week" />
       </label><br>
 
       <label>per_Month:
-        <input [(ngModel)]="rateData.per_Month"  placeholder="per_Month"/>
+        <input [(ngModel)]="rateData.per_Month" placeholder="per_Month" />
       </label><br>
 
       <label>per_Year:
-        <input [(ngModel)]="rateData.per_Year"  placeholder="per_Year"/>
+        <input [(ngModel)]="rateData.per_Year" placeholder="per_Year" />
       </label><br>
-  
-      <button (click)="addRate()">Save</button>
-      
+
+      <button class="section-btn" (click)="addRate()">Save</button>
+
+    </div>
+
   </div>
+
+</body>

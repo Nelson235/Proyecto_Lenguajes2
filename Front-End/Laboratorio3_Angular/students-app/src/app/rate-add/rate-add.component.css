@@ -1,0 +1,43 @@
+body {
+    background: #193D64;
+    margin: auto;
+    padding: auto;
+  
+  }
+  
+  .container{
+    background-color: #193D64 ;
+    padding: 340px;
+  }
+  .section{
+    background-color: #193D64 ;
+  }
+
+  label{
+    color: #ffffff;
+  }
+  
+  h2{
+    color: rgb(255, 255, 255);
+  }
+  
+  a{
+    color: #21D6EC;
+  }
+  
+  .section-btn {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 10px 32px;
+    transition: 0.5s;
+  }
+  
+  .section-btn:hover {
+    background: #ffffff;
+    border-color: transparent;
+  }
+  

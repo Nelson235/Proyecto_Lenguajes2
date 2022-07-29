@@ -1,22 +1,30 @@
-<div>
-    <h2>User Add</h2>
-    <label>Placa:
-      <input [(ngModel)]="vehiculeData.license_Plate"  placeholder="Placa"/>
-    </label><br>
-    <label>color:
-      <input [(ngModel)]="vehiculeData.color"  placeholder="Color"/>
-    </label><br>
-    <label>Marca:
-      <input [(ngModel)]="vehiculeData.brand"  placeholder="Marca"/>
-    </label><br>
-    <label>ID User:
-      <input [(ngModel)]="vehiculeData.id_User"  placeholder="Id User"/>
-    </label><br>
-    <label>Tipo:
-      <input [(ngModel)]="vehiculeData.id_Type"  placeholder="Tipo"/>
-    </label><br>
+<body style="background-color:#193D64">
 
-  
-      <button (click)="addVehicule()">Save</button>
-      
+  <div class="container">
+
+    <div>
+      <h2>User Add</h2>
+      <label>Placa:
+        <input [(ngModel)]="vehiculeData.license_Plate" placeholder="Placa" />
+      </label><br>
+      <label>color:
+        <input [(ngModel)]="vehiculeData.color" placeholder="Color" />
+      </label><br>
+      <label>Marca:
+        <input [(ngModel)]="vehiculeData.brand" placeholder="Marca" />
+      </label><br>
+      <label>ID User:
+        <input [(ngModel)]="vehiculeData.id_User" placeholder="Id User" />
+      </label><br>
+      <label>Tipo:
+        <input [(ngModel)]="vehiculeData.id_Type" placeholder="Tipo" />
+      </label><br>
+
+
+      <button class="section-btn" (click)="addVehicule()">Save</button>
+
+    </div>
+
   </div>
+
+</body>

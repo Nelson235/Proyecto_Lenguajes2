@@ -1,12 +1,16 @@
-<p>Roles</p>
+<body style="background-color:#193D64">
 
-<div>
-  <button (click)="add_Role()">
-    Add
-  </button>
-</div>
+  <div class="container">
 
-<!--<ul class="students">
+    <h2>Roles</h2>
+
+    <div>
+      <button class="section-btn" (click)="add_Role()">
+        Add
+      </button>
+    </div>
+
+    <!--<ul class="students">
     <li *ngFor="let s of roles; let i=index;">
       <a routerLink="/role-details/{{s.id_Role}}">
         <span class="badge">{{i+1}}</span> {{s.name}}
@@ -16,32 +20,35 @@
     </li>
   </ul>-->
 
-  <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <h3>Usuarios</h3>
-      </div>
-      <div class="card-body">
-        <table class="table table-hover">
-          <thead>
-            <tr class="text-center">
-              <th>ID</th>
-              <th>Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let s of roles; let i=index;" class="text-center">
-              <td>{{s.id_Role}}</td>
-              <td>{{s.name}}</td>
-              <td>
-                <button class="btn btn-warming">Editar</button>
-                <button class="btn btn-info" (click)="delete(s.id_Role)">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h3>Usuarios</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr class="text-center">
+                <th>ID</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of roles; let i=index;" class="text-center">
+                <td>{{s.id_Role}}</td>
+                <td>{{s.name}}</td>
+                <td>
+                  <button class="btn btn-warming">Editar</button>
+                  <button class="btn btn-info" (click)="delete(s.id_Role)">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+
+
   </div>
-  
-  
+
+</body>

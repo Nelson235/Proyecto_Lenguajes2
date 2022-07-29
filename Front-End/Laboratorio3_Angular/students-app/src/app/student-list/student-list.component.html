@@ -1,75 +1,63 @@
-<h2>Parking List</h2>
+<body style="background-color:#193D64">
 
-<div>
-  <button (click)="add()">
-    Add
-  </button>
-</div>
+  <div class="container">
 
-<!--<ul class="students">
-  <li *ngFor="let s of parkings; let i=index;">
-    <a routerLink="/student-details/{{s.id_Parking}}">
-      <span class="badge">{{i+1}}</span> {{s.name}}
-    </a>
-    <button class="delete" title="delete student"
-      (click)="delete(s.id_Parking)">x</button>
-  </li>
-</ul>
-<a href='/user-list'>Users</a>
-<br>
-<a href='/vehicule-list'>Vehicules</a>
-<br>
-<a href='/vehicule-type-list'>Vehicule_Type</a>
-<br>
-<a href='/rate-list'>Rate</a>
-<br>
-<a href='/role-list'>Role</a>
-<br>
-<a href='/space-list'>Space</a>-->
+    <div style="background-color:#193D64">
+      <h2>Parking List</h2>
 
-<div class="container">
-  <div class="card">
-    <div class="card-header">
-      <h3>Parqueos</h3>
+      <div>
+        <button class="section-btn" (click)="add()">
+          Add
+        </button>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <h3>Parqueos</h3>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead>
+                <tr class="text-center">
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Capacidad</th>
+                  <th>Provincia</th>
+                  <th>Distrito</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let s of parkings; let i=index;" class="text-center">
+                  <td>{{s.id_Parking}}</td>
+                  <td>{{s.name}}</td>
+                  <td>{{s.capacity}}</td>
+                  <td>{{s.province}}</td>
+                  <td>{{s.district}}</td>
+                  <td>
+                    <button class="btn btn-warming">Editar</button>
+                    <button class="btn btn-info" (click)="delete(s.id_Parking)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <a href='/user-list'>Users</a>
+        <br>
+        <a href='/vehicule-list'>Vehicules</a>
+        <br>
+        <a href='/vehicule-type-list'>Vehicule_Type</a>
+        <br>
+        <a href='/rate-list'>Rate</a>
+        <br>
+        <a href='/role-list'>Role</a>
+        <br>
+        <a href='/space-list'>Space</a>
+      </div>
+
     </div>
-    <div class="card-body">
-      <table class="table table-hover">
-        <thead>
-          <tr class="text-center">
-            <th>ID</th>
-            <th>Name</th>
-            <th>Capacidad</th>
-            <th>Provincia</th>
-            <th>Distrito</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let s of parkings; let i=index;" class="text-center">
-            <td>{{s.id_Parking}}</td>
-            <td>{{s.name}}</td>
-            <td>{{s.capacity}}</td>
-            <td>{{s.province}}</td>
-            <td>{{s.district}}</td>
-            <td>
-              <button class="btn btn-warming">Editar</button>
-              <button class="btn btn-info" (click)="delete(s.id_Parking)">Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
   </div>
-  <a href='/user-list'>Users</a>
-<br>
-<a href='/vehicule-list'>Vehicules</a>
-<br>
-<a href='/vehicule-type-list'>Vehicule_Type</a>
-<br>
-<a href='/rate-list'>Rate</a>
-<br>
-<a href='/role-list'>Role</a>
-<br>
-<a href='/space-list'>Space</a>
-</div>
 
-
+</body>
