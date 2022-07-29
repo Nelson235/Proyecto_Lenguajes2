@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, ROUTES, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,8 +34,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';//INPUT
 import { MatSelectModule } from '@angular/material/select';//INPUT
-
-
+import { HomeComponent } from './home/home.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { DependentNavbarComponent } from './dependent-navbar/dependent-navbar.component';
 
 
 
@@ -44,16 +46,16 @@ const appRoutes: Routes = [
     path: 'students',
     component: StudentListComponent,
     data: { title: 'Student List' }
-  },{
+  }, {
     path: 'student-add',
     component: StudentAddComponent,
-    data: {title: 'Student Add'}
-  
-  },{
+    data: { title: 'Student Add' }
+
+  }, {
     path: 'student-add-validate',
     component: StudentAddValidateComponent,
-    data: {title: 'Student Add Validate'}
-  
+    data: { title: 'Student Add Validate' }
+
   },
   {
     path: 'user-list',
@@ -148,18 +150,35 @@ const appRoutes: Routes = [
   {
     path: 'student-details/:id',
     component: StudentDetailsComponent,
-    data: {title: 'Student Details'}
-  
+    data: { title: 'Student Details' }
+
   },
   {
     path: 'login',
-    component:LoginComponent,
+    component: LoginComponent,
     data: { title: 'Parking Login' }
   },
-  { path: '',
-    redirectTo: '/student-list',
+  {
+    path: 'menu-admin',
+    component: AdminNavbarComponent,
+    data: { title: 'Menu Admin' }
+  },
+  {
+    path: 'menu-user',
+    component: UserNavbarComponent,
+    data: { title: 'Menu User' }
+  },
+  {
+    path: 'menu-depen',
+    component: DependentNavbarComponent,
+    data: { title: 'Menu Dependent' }
+  },
+  {
+    path: '',
+    redirectTo: '/login',
     pathMatch: 'full'
   }
+
 ];
 
 @NgModule({
@@ -187,7 +206,11 @@ const appRoutes: Routes = [
     SpaceListComponent,
     SpaceAddComponent,
     SpaceDetailsComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    HomeComponent,
+    AdminNavbarComponent,
+    UserNavbarComponent,
+    DependentNavbarComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),

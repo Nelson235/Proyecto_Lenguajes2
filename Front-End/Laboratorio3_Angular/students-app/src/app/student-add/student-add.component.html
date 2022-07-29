@@ -1,21 +1,25 @@
-<!--<div>
-  <h2>Parking Add</h2>
-  <label>Name_Parking:
-    <input [(ngModel)]="parkingData.name_Parking"  placeholder="Name_Parking"/>
-  </label><br>
-  <label>Capacity:
-    <input [(ngModel)]="parkingData.capacity"  placeholder="Capacity"/>
-  </label><br>
-  <label>Province:
-    <input [(ngModel)]="parkingData.province"  placeholder="Province"/>
-  </label><br>
-  <label>District:
-    <input [(ngModel)]="parkingData.district"  placeholder="District"/>
-  </label><br>
 
-    <button (click)="addParking()">Save</button>
-    
-</div>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="home">Menu</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active"> 
+          <a class="nav-link" routerLink="/menu-admin">Home</a>  
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <mat-form-field appearance="fill" >
   <mat-label>Nombre parqueo</mat-label>

@@ -1,16 +1,29 @@
-<!--<div>
-    <h2>Role Add</h2>
-    <label>Name:
-      <input [(ngModel)]="roleData.name"  placeholder="Name Role"/>
-    </label><br>
-  
-      <button (click)="addRole()">Save</button>
-      
-  </div>-->
 
 <body style="background-color:#193D64">
 
   <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="home">Menu</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" routerLinkActive="active"> 
+              <a class="nav-link" routerLink="/menu-admin">Home</a>  
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <mat-form-field appearance="fill">
       <mat-label>Nombre</mat-label>
