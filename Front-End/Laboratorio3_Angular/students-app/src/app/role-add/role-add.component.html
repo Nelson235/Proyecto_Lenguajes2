@@ -8,10 +8,18 @@
       
   </div>-->
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Nombre</mat-label>
-    <input matInput [(ngModel)]="roleData.name">
-  </mat-form-field>
+<body style="background-color:#193D64">
 
-  
-  <button mat-raised-button color="accent" (click)="addRole()">Añadir</button>
+  <div class="container">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="roleData.name">
+    </mat-form-field>
+
+
+    <button mat-raised-button color="accent" (click)="addRole()">Añadir</button>
+
+  </div>
+
+</body>

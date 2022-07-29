@@ -1,12 +1,16 @@
-<p>Vehicule_Type</p>
+<body style="background-color:#193D64">
 
-<div>
-  <button (click)="add_VehiculeType()">
-    Add Vehicule_Type
-  </button>
-</div>
+  <div class="container">
 
-<!--<ul class="students">
+    <h2>Vehicule_Type</h2>
+
+    <div>
+      <button class="section-btn" (click)="add_VehiculeType()">
+        Add Vehicule_Type
+      </button>
+    </div>
+
+    <!--<ul class="students">
     <li *ngFor="let s of vehiculesType; let i=index;">
       <a routerLink="/vehicule-type-details/{{s.id_Type}}">
         <span class="badge">{{i+1}}</span> {{s.name}}
@@ -16,31 +20,35 @@
     </li>
   </ul>-->
 
-  <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <h3>Usuarios</h3>
-      </div>
-      <div class="card-body">
-        <table class="table table-hover">
-          <thead>
-            <tr class="text-center">
-              <th>ID</th>
-              <th>Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let s of vehiculesType; let i=index;" class="text-center">
-              <td>{{s.id_Type}}</td>
-              <td routerLink="/vehicule-type-details/{{s.id_Type}}">{{s.name}}</td>
-              <td>
-              <button mat-raised-button color="accent">Editar</button>
-              <button mat-raised-button color="warn" (click)="delete(s.id_Type)">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
 
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h3>Usuarios</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr class="text-center">
+                <th>ID</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of vehiculesType; let i=index;" class="text-center">
+                <td>{{s.id_Type}}</td>
+                <td routerLink="/vehicule-type-details/{{s.id_Type}}">{{s.name}}</td>
+                <td>
+                  <button mat-raised-button color="accent">Editar</button>
+                  <button mat-raised-button color="warn" (click)="delete(s.id_Type)">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+
+</body>

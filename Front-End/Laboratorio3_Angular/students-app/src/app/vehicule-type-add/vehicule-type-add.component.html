@@ -1,4 +1,7 @@
-<!--<div>
+<body style="background-color:#193D64">
+
+  <div class="container">
+    <!--<div>
     <h2>Vehicule type Add</h2>
     <label>Name Vehicule type:
       <input [(ngModel)]="typeData.name"  placeholder="name"/>
@@ -8,9 +11,12 @@
       
   </div>-->
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Tipo de vehiculo</mat-label>
-    <input matInput [(ngModel)]="typeData.name">
-  </mat-form-field>
-  
-  <button mat-raised-button color="accent" (click)="addVehiculeType()">Añadir</button>
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo de vehiculo</mat-label>
+      <input matInput [(ngModel)]="typeData.name">
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" (click)="addVehiculeType()">Añadir</button>
+  </div>
+
+</body>

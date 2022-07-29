@@ -1,12 +1,16 @@
-<p>Vehicules</p>
+<body style="background-color:#193D64">
 
-<div>
-  <button (click)="add_Vehicule()">
-    Add Vehicules
-  </button>
-</div>
+  <div class="container">
 
-<!--<ul class="students">
+    <h2>Vehicules</h2>
+
+    <div>
+      <button class="section-btn" (click)="add_Vehicule()">
+        Add Vehicules
+      </button>
+    </div>
+
+    <!--<ul class="students">
     <li *ngFor="let s of vehicules; let i=index;">
       <a routerLink="/vehicule-details/{{s.id_Vehicule}}">
         <span class="badge">{{i+1}}</span> {{s.license_Plate}}
@@ -16,38 +20,44 @@
     </li>
   </ul>-->
 
-  <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <h3>Vehiculos</h3>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h3>Vehiculos</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr class="text-center">
+                <th>ID</th>
+                <th>Placa</th>
+                <th>Color</th>
+                <th>Marca</th>
+                <th>Usuario</th>
+                <th>Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of vehicules; let i=index;" class="text-center">
+                <td>{{s.id_Vehicule}}</td>
+                <td a routerLink="/vehicule-details/{{s.id_Vehicule}}">{{s.license_Plate}}</td>
+                <td>{{s.color}}</td>
+                <td>{{s.brand}}</td>
+                <td>{{s.id_User.name}}</td>
+                <td>{{s.id_Type.name}}</td>
+                <td>
+                  <button mat-raised-button color="accent">Editar</button>
+                  <button mat-raised-button color="warn" (click)="delete(s.id_Vehicule)">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
       </div>
-      <div class="card-body">
-        <table class="table table-hover">
-          <thead>
-            <tr class="text-center">
-              <th>ID</th>
-              <th>Placa</th>
-              <th>Color</th>
-              <th>Marca</th>
-              <th>Usuario</th>
-              <th>Tipo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let s of vehicules; let i=index;" class="text-center">
-              <td>{{s.id_Vehicule}}</td>
-              <td a routerLink="/vehicule-details/{{s.id_Vehicule}}">{{s.license_Plate}}</td>
-              <td>{{s.color}}</td>
-              <td>{{s.brand}}</td>
-              <td>{{s.id_User.name}}</td>
-              <td>{{s.id_Type.name}}</td>
-              <td>
-                <button mat-raised-button color="accent">Editar</button>
-              <button mat-raised-button color="warn" (click)="delete(s.id_Vehicule)">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
+
     </div>
-  </div>
+
+</body>

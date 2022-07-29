@@ -1,4 +1,7 @@
-<!--<div>
+<body style="background-color:#193D64">
+
+  <div class="container">
+    <!--<div>
     <h2>User Add</h2>
     <label>Name:
       <input [(ngModel)]="userData.name"  placeholder="Name User"/>
@@ -62,41 +65,45 @@
   <button mat-raised-button color="accent" (click)="addUser()">Añadir</button>
       
   </div>-->
-  
-  <mat-form-field appearance="fill" >
-    <mat-label>Nombre</mat-label>
-    <input matInput [(ngModel)]="userData.name">
-  </mat-form-field>
-  <br>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Apellidos</mat-label>
-    <input matInput [(ngModel)]="userData.lastName">
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill" >
-    <mat-label>Telefono</mat-label>
-    <input matInput [(ngModel)]="userData.telephone">
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill" >
-    <mat-label>Direccion</mat-label>
-    <input matInput [(ngModel)]="userData.address">
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill" >
-    <mat-label>Correo</mat-label>
-    <input matInput [(ngModel)]="userData.email">
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill" >
-    <mat-label>Contraseña</mat-label>
-    <input type="password" matInput [(ngModel)]="userData.password">
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill" >
-    <mat-label>Role</mat-label>
-    <input matInput [(ngModel)]="userData.id_Role">
-  </mat-form-field>
-  <br>
-  <button mat-raised-button color="accent" (click)="addUser()">Añadir</button>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="userData.name">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Apellidos</mat-label>
+      <input matInput [(ngModel)]="userData.lastName">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Telefono</mat-label>
+      <input matInput [(ngModel)]="userData.telephone">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Direccion</mat-label>
+      <input matInput [(ngModel)]="userData.address">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput [(ngModel)]="userData.email">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" matInput [(ngModel)]="userData.password">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Role</mat-label>
+      <input matInput [(ngModel)]="userData.id_Role">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" (click)="addUser()">Añadir</button>
+
+  </div>
+
+</body>
