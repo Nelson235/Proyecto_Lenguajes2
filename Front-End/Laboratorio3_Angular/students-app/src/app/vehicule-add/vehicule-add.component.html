@@ -1,36 +1,27 @@
-<body style="background-color:#193D64">
+<body style="background-color:#ffff">
 
-  <div class="container">
-    <!-- <div>
-    <h2>User Add</h2>
-    <label>Placa:
-      <input [(ngModel)]="vehiculeData.license_Plate"  placeholder="Placa"/>
-    </label><br>
-    <label>color:
-      <input [(ngModel)]="vehiculeData.color"  placeholder="Color"/>
-    </label><br>
-    <label>Marca:
-      <input [(ngModel)]="vehiculeData.brand"  placeholder="Marca"/>
-    </label><br>
-    <label>ID User:
-      <input [(ngModel)]="vehiculeData.id_User"  placeholder="Id User"/>
-    </label><br>
-    <label>Tipo:
-      <input [(ngModel)]="vehiculeData.id_Type"  placeholder="Tipo"/>
-    </label><br>
-
-  
-      <button (click)="addVehicule()">Save</button>
-
-      <mat-form-field appearance="fill">
-    <mat-label>Usuarios</mat-label>
-    <mat-select >
-      <mat-option *ngFor="let s of vehicules; let i=index;" >{{s.id_User.name}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-      
-  </div>-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="home">Menu</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active"> 
+            <a class="nav-link" routerLink="/menu-admin">Home</a>  
+        </li>
+      </ul>
+    </div>
+  </nav>
+   
 
     <mat-form-field appearance="fill">
       <mat-label>Placa</mat-label>
@@ -58,7 +49,5 @@
     </mat-form-field>
     <br>
     <button mat-raised-button color="accent" (click)="addVehicule()">Añadir</button>
-
-  </div>
 
 </body>

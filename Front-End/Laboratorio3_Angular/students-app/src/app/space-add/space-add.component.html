@@ -1,56 +1,25 @@
-<body style="background-color:#193D64">
-
-  <div class="container">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="home">Menu</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item" routerLinkActive="active"> 
-              <a class="nav-link" routerLink="/menu-admin">Home</a>  
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <h2>Space Add</h2>
-    <label>Number:
-      <input [(ngModel)]="spaceData.number"  placeholder="number space"/>
-    </label><br>
-    <label>id_Type:
-      <input [(ngModel)]="spaceData.id_Type"  placeholder="id_Type"/>
-    </label><br>
-    <label>status:
-      <input [(ngModel)]="spaceData.status"  placeholder="status"/>
-    </label><br>
-    <label>id_vehicule:
-      <input [(ngModel)]="spaceData.id_Vehicule"  placeholder="id_vehicule"/>
-    </label><br>
-    <label>id_Parking:
-      <input [(ngModel)]="spaceData.id_Parking"  placeholder="id_Parking"/>
-    </label><br>
-    <label>check_In:
-      <input [(ngModel)]="spaceData.check_In" type="datetime"  placeholder="check_In"/>
-    </label><br>
-    <label>id_Rate:
-      <input [(ngModel)]="spaceData.id_Rate"  placeholder="id_Rate"/>
-    </label><br>
-  
-      <button (click)="addSpace()">Save</button>
-      
-  </div>-->
-
+<body style="background-color:#ffff">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="home">Menu</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active"> 
+            <a class="nav-link" routerLink="/menu-admin">Home</a>  
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
     <mat-form-field appearance="fill">
@@ -89,7 +58,5 @@
     </mat-form-field>
     <br>
     <button mat-raised-button color="accent" (click)="addSpace()">Añadir</button>
-
-  </div>
 
 </body>
