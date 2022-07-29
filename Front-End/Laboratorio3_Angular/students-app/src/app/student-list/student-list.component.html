@@ -36,23 +36,24 @@
       <table class="table table-hover">
         <thead>
           <tr class="text-center">
-            <th>ID</th>
-            <th>Name</th>
-            <th>Capacidad</th>
-            <th>Provincia</th>
-            <th>Distrito</th>
+            <th >ID</th>
+            <th >Name</th>
+            <th >Capacidad</th>
+            <th >Provincia</th>
+            <th >Distrito</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let s of parkings; let i=index;" class="text-center">
             <td>{{s.id_Parking}}</td>
-            <td>{{s.name}}</td>
+              <td routerLink="/student-details/{{s.id_Parking}}">{{s.name}}</td>
             <td>{{s.capacity}}</td>
             <td>{{s.province}}</td>
             <td>{{s.district}}</td>
             <td>
-              <button class="btn btn-warming">Editar</button>
-              <button class="btn btn-info" (click)="delete(s.id_Parking)">Eliminar</button>
+              <button mat-raised-button color="accent">Editar</button>
+              <button mat-raised-button color="warn" (click)="delete(s.id_Parking)">Eliminar</button>
+              <button mat-raised-button color="accent" routerLink="/space-list/">Select</button>
             </td>
           </tr>
         </tbody>

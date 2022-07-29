@@ -1,4 +1,4 @@
-<div>
+<!--<div>
   <h2>Parking Add</h2>
   <label>Name_Parking:
     <input [(ngModel)]="parkingData.name_Parking"  placeholder="Name_Parking"/>
@@ -15,4 +15,26 @@
 
     <button (click)="addParking()">Save</button>
     
-</div>
+</div>-->
+
+<mat-form-field appearance="fill" >
+  <mat-label>Nombre parqueo</mat-label>
+  <input matInput [(ngModel)]="parkingData.name_Parking">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill" >
+  <mat-label>Capacidad</mat-label>
+  <input type="number" matInput [(ngModel)]="parkingData.capacity">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill" >
+  <mat-label>Provincia</mat-label>
+  <input matInput [(ngModel)]="parkingData.province">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill" >
+  <mat-label>Distrito</mat-label>
+  <input matInput [(ngModel)]="parkingData.district">
+</mat-form-field>
+<br>
+<button mat-raised-button color="accent" (click)="addParking()">Añadir</button>

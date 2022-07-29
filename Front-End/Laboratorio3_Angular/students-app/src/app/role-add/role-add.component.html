@@ -1,4 +1,4 @@
-<div>
+<!--<div>
     <h2>Role Add</h2>
     <label>Name:
       <input [(ngModel)]="roleData.name"  placeholder="Name Role"/>
@@ -6,4 +6,12 @@
   
       <button (click)="addRole()">Save</button>
       
-  </div>
+  </div>-->
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="roleData.name">
+  </mat-form-field>
+
+  
+  <button mat-raised-button color="accent" (click)="addRole()">Añadir</button>

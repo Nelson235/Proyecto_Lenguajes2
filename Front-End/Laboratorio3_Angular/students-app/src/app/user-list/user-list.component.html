@@ -37,7 +37,7 @@
           </thead>
           <tbody>
             <tr *ngFor="let s of users; let i=index;" class="text-center">
-              <td>{{s.id}}</td>
+              <td>{{s.id_User}}</td>
               <td>{{s.name}}</td>
               <td>{{s.lastName}}</td>
               <td>{{s.telephone}}</td>
@@ -46,8 +46,8 @@
               <td>{{s.password}}</td>
               <td>{{s.id_Role.name}}</td>
               <td>
-                <button class="btn btn-warming">Editar</button>
-                <button class="btn btn-info" (click)="delete(s.id_Parking)">Eliminar</button>
+                <button mat-raised-button color="accent">Editar</button>
+              <button mat-raised-button color="warn" (click)="delete(s.id_User)">Eliminar</button>
               </td>
             </tr>
           </tbody>
