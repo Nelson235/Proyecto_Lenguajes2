@@ -29,6 +29,7 @@ import { SpaceListComponent } from './space-list/space-list.component';
 import { SpaceAddComponent } from './space-add/space-add.component';
 import { SpaceDetailsComponent } from './space-details/space-details.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
 
 
 
@@ -60,9 +61,14 @@ const appRoutes: Routes = [
     data: { title: 'User Add' }
   },
   {
-    path: 'user-details/:email',
+    path: 'user-details/:id',
     component: UserDetailsComponent,
     data: { title: 'User Details' }
+  },
+  {
+    path: 'user-update/:id',
+    component: UserUpdateComponent,
+    data: { title: 'User Update' }
   },
   {
     path: 'vehicule-add',
@@ -181,7 +187,8 @@ const appRoutes: Routes = [
     SpaceListComponent,
     SpaceAddComponent,
     SpaceDetailsComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UserUpdateComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),
