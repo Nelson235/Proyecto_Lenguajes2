@@ -53,6 +53,10 @@ export class StudentServiceService {
     return this.http.get(endpoint2+'Parking/GetParking/'+id,httpOptions)
   }
 
+  getByName(name:any): Observable<any> {
+    return this.http.get(endpoint2+'Parking/GetParkingByName/'+name,httpOptions)
+  }
+
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
@@ -88,6 +92,10 @@ delete_User(id_User: number): Observable<any> {
 
 add_User(user: any){
   return this.http.post(endpoint2+'User/', user, httpOptions)
+}
+
+update_User(id:any ,user: any){
+  return this.http.put(endpoint2+'User/update/'+id, user, httpOptions)
 }
 
 getById_User(id:any): Observable<any> {
@@ -203,8 +211,8 @@ delete_Space(id_Space: number): Observable<any> {
   );
 }
 
-add_Space(Space: any){
-  return this.http.post(endpoint2+'Space/', Space, httpOptions)
+add_Space(parking: any): Observable<any>{
+  return this.http.post(endpoint2+'Space/', parking, httpOptions)
 }
 
 getById_Space(id:any): Observable<any> {

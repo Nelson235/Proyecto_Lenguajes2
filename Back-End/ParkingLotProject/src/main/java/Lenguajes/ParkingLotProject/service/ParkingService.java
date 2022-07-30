@@ -1,5 +1,6 @@
 package Lenguajes.ParkingLotProject.service;
 
+import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.repository.ParkingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,12 @@ public class ParkingService {
         return repository.findById(id_Parking).get();
     }
 
+    public void update(Parking entity) {
+        Parking entityToUpdate = repository.findById(entity.getId_Parking()).get();
+        if(entityToUpdate != null) {
+            repository.save(entity);
+        }
+    }
     public void delete(int id_Parking) {repository.deleteById(id_Parking);
     }
 

@@ -1,6 +1,7 @@
 package Lenguajes.ParkingLotProject.controller;
 
 import Lenguajes.ParkingLotProject.domain.Role;
+import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,14 +39,12 @@ public class RoleController {
         service.save(role);
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Role> update(@RequestBody Role role, @PathVariable Integer id) {
-        try {
-            service.save(role);
-            return new ResponseEntity<Role>(role, HttpStatus.OK);
-        } catch (NoSuchElementException e) {
-            return new ResponseEntity<Role>(HttpStatus.NOT_FOUND);
-        }
+    @RequestMapping(path = "/update/{id}", method = RequestMethod.PUT)
+    public void update(@PathVariable("id") int id,
+                       @RequestBody Role role) {
+        Role entity = role;
+        entity.setId_Role(id);
+        service.update(entity);
     }
 
     @DeleteMapping("/delete/{id}")

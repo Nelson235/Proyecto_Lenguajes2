@@ -53,19 +53,18 @@ public class UserController {
         }
     }
 
+
     @PostMapping("/")
     public void add(@RequestBody User user) {
         service.save(user);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<User> update(@RequestBody User user, @PathVariable Integer id) {
-        try {
-            service.save(user);
-            return new ResponseEntity<User>(user, HttpStatus.OK);
-        } catch (NoSuchElementException e) {
-            return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
-        }
+    @RequestMapping(path = "/update/{id}", method = RequestMethod.PUT)
+    public void update(@PathVariable("id") int id,
+                          @RequestBody User user) {
+        User entity = user;
+        entity.setId_User(id);
+        service.update(entity);
     }
 
     @DeleteMapping("/DeleteUser/{id}")

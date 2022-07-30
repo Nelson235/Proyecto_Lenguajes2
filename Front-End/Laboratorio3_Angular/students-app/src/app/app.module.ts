@@ -38,6 +38,8 @@ import { HomeComponent } from './home/home.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { DependentNavbarComponent } from './dependent-navbar/dependent-navbar.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
+
 
 
 
@@ -68,9 +70,14 @@ const appRoutes: Routes = [
     data: { title: 'User Add' }
   },
   {
-    path: 'user-details/:email',
+    path: 'user-details/:id',
     component: UserDetailsComponent,
     data: { title: 'User Details' }
+  },
+  {
+    path: 'user-update/:id',
+    component: UserUpdateComponent,
+    data: { title: 'User Update' }
   },
   {
     path: 'vehicule-add',
@@ -210,7 +217,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AdminNavbarComponent,
     UserNavbarComponent,
-    DependentNavbarComponent
+    DependentNavbarComponent,
+    UserUpdateComponent
   ],
   imports: [
       RouterModule.forRoot(appRoutes),

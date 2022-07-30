@@ -13,7 +13,7 @@ export class UserDetailsComponent implements OnInit {
   constructor(public rest: StudentServiceService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.rest.getByEmail_User(this.route.snapshot.params['email']).subscribe((data: {}) => {
+    this.rest.getById_User(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.user = data;
     });

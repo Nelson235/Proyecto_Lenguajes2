@@ -30,4 +30,11 @@ public class UserService {
         repository.deleteById(id_User);
     }
 
+    public void update(User entity) {
+        User entityToUpdate = repository.findById(entity.getId_User()).get();
+        if(entityToUpdate != null) {
+         repository.save(entity);
+        }
+    }
+
 }

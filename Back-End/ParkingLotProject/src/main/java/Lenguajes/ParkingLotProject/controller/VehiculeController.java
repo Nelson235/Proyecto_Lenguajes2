@@ -1,5 +1,6 @@
 package Lenguajes.ParkingLotProject.controller;
 
+import Lenguajes.ParkingLotProject.domain.Space;
 import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.domain.Vehicule;
 import Lenguajes.ParkingLotProject.service.VehiculeService;
@@ -40,15 +41,14 @@ public class VehiculeController {
         service.save(vehicule);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Vehicule> update(@RequestBody Vehicule vehicule, @PathVariable Integer id) {
-        try {
-            service.save(vehicule);
-            return new ResponseEntity<Vehicule>(vehicule, HttpStatus.OK);
-        } catch (NoSuchElementException e) {
-            return new ResponseEntity<Vehicule>(HttpStatus.NOT_FOUND);
-        }
+    @RequestMapping(path = "/update/{id}", method = RequestMethod.PUT)
+    public void update(@PathVariable("id") int id,
+                       @RequestBody Vehicule vehicule) {
+        Vehicule entity = vehicule;
+        entity.setId_Vehicule(id);
+        service.update(entity);
     }
+
 
     @DeleteMapping("/DeleteVehicule/{id}")
     public void delete(@PathVariable Integer id) {

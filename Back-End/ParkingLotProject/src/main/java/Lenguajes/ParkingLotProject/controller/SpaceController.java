@@ -1,7 +1,6 @@
 package Lenguajes.ParkingLotProject.controller;
 
-import Lenguajes.ParkingLotProject.domain.Parking;
-import Lenguajes.ParkingLotProject.domain.Space;
+import Lenguajes.ParkingLotProject.domain.*;
 import Lenguajes.ParkingLotProject.service.ParkingService;
 import Lenguajes.ParkingLotProject.service.SpaceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,22 +35,40 @@ public class SpaceController {
     }
 
     @PostMapping("/")
-    public void add(@RequestBody Space space) {
+    public void add(@RequestBody Parking parking) {
+        Vehicule_Type type = new Vehicule_Type();
+        type.setId_Type(6);
 
-        service.save(space);
+        Vehicule vehicule = new Vehicule();
+        vehicule.setId_Vehicule(18);
+
+        Rate rate = new Rate();
+        rate.setId_Rate(16);
+        Space space = new Space();
+        space.setId_Space(0);
+        space.setId_Type(type);
+        space.setStatus("Disponible");
+        space.setId_Vehicule(vehicule);
+        space.setCheck_In("");
+        space.setId_Rate(rate);
+        space.setId_Parking(parking);
+
+
+
+        if(parking !=null){
+            for (int i=1;i<=parking.getCapacity();i++) {
+                space.setNumber(i);
+                service.save(space);
+            }
+        }
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Space> update(@RequestBody Space space, @PathVariable Integer id) {
-        try {
-            /*service.get(id);
-            if(service.get(id)){
-            }*/
-            service.save(space);
-            return new ResponseEntity<Space>(space, HttpStatus.OK);
-        } catch (NoSuchElementException e) {
-            return new ResponseEntity<Space>(HttpStatus.NOT_FOUND);
-        }
+    @RequestMapping(path = "/update/{id}", method = RequestMethod.PUT)
+    public void update(@PathVariable("id") int id,
+                       @RequestBody Space space) {
+        Space entity = space;
+        entity.setId_Space(id);
+        service.update(entity);
     }
 
     @DeleteMapping("/delete/{id}")

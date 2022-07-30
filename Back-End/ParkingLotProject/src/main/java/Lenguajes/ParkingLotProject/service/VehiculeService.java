@@ -1,5 +1,6 @@
 package Lenguajes.ParkingLotProject.service;
 
+import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.domain.Vehicule;
 import Lenguajes.ParkingLotProject.repository.RoleRepository;
 import Lenguajes.ParkingLotProject.repository.VehiculeRepository;
@@ -27,6 +28,13 @@ public class VehiculeService {
 
     public Vehicule get(int id_Vehicule) {
         return repository.findById(id_Vehicule).get();
+    }
+
+    public void update(Vehicule entity) {
+        Vehicule entityToUpdate = repository.findById(entity.getId_Vehicule()).get();
+        if(entityToUpdate != null) {
+            repository.save(entity);
+        }
     }
 
     public void delete(int id_Vehicule) {repository.deleteById(id_Vehicule);

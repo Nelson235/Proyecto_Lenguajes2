@@ -1,5 +1,6 @@
 package Lenguajes.ParkingLotProject.service;
 
+import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,13 @@ public class RoleService {
 
     public Role get(int id_Role) {
         return repository.findById(id_Role).get();
+    }
+
+    public void update(Role entity) {
+        Role entityToUpdate = repository.findById(entity.getId_Role()).get();
+        if(entityToUpdate != null) {
+            repository.save(entity);
+        }
     }
 
     public void delete(int id_Role) {repository.deleteById(id_Role);

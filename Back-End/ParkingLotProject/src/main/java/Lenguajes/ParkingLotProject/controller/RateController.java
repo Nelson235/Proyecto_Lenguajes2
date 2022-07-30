@@ -2,6 +2,7 @@ package Lenguajes.ParkingLotProject.controller;
 
 import Lenguajes.ParkingLotProject.domain.Parking;
 import Lenguajes.ParkingLotProject.domain.Rate;
+import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.service.ParkingService;
 import Lenguajes.ParkingLotProject.service.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,17 +42,12 @@ public class RateController {
         service.save(rate);
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Rate> update(@RequestBody Rate rate, @PathVariable Integer id) {
-        try {
-            /*service.get(id);
-            if(service.get(id)){
-            }*/
-            service.save(rate);
-            return new ResponseEntity<Rate>(rate, HttpStatus.OK);
-        } catch (NoSuchElementException e) {
-            return new ResponseEntity<Rate>(HttpStatus.NOT_FOUND);
-        }
+    @RequestMapping(path = "/update/{id}", method = RequestMethod.PUT)
+    public void update(@PathVariable("id") int id,
+                       @RequestBody Rate rate) {
+        Rate entity = rate;
+        entity.setId_Rate(id);
+        service.update(entity);
     }
 
     @DeleteMapping("/delete/{id}")

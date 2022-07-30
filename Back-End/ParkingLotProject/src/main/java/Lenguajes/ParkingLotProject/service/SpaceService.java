@@ -1,6 +1,7 @@
 package Lenguajes.ParkingLotProject.service;
 
 import Lenguajes.ParkingLotProject.domain.Space;
+import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.repository.RoleRepository;
 import Lenguajes.ParkingLotProject.repository.SpaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,13 @@ public class SpaceService {
 
     public Space get(int id_Space) {
         return repository.findById(id_Space).get();
+    }
+
+    public void update(Space entity) {
+        Space entityToUpdate = repository.findById(entity.getId_Space()).get();
+        if(entityToUpdate != null) {
+            repository.save(entity);
+        }
     }
 
     public void delete(int id_Space) {repository.deleteById(id_Space);

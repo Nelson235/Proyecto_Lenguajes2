@@ -1,6 +1,7 @@
 package Lenguajes.ParkingLotProject.service;
 
 import Lenguajes.ParkingLotProject.domain.Rate;
+import Lenguajes.ParkingLotProject.domain.User;
 import Lenguajes.ParkingLotProject.repository.RateRepository;
 import Lenguajes.ParkingLotProject.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,13 @@ public class RateService {
 
     public Rate get(int id_Rate) {
         return repository.findById(id_Rate).get();
+    }
+
+    public void update(Rate entity) {
+        Rate entityToUpdate = repository.findById(entity.getId_Rate()).get();
+        if(entityToUpdate != null) {
+            repository.save(entity);
+        }
     }
 
     public void delete(int id_Rate) {repository.deleteById(id_Rate);
